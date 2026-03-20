@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStream - Privacy Policy</title>
+    <title>SmartStream | Privacy Policy & Terms</title>
     <style>
+        :root {
+            --bg-color: #111111;
+            --surface-color: #1a1a1a;
+            --primary-color: #E50914;
+            --text-main: #dddddd;
+        }
         body {
-            background-color: #111111;
-            color: #dddddd;
-            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 40px 20px;
@@ -16,41 +22,80 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #1A1A1A;
-            padding: 40px;
+            background-color: var(--surface-color);
+            padding: 50px;
             border-radius: 12px;
-            border-top: 4px solid #E50914;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { color: #ffffff; }
-        h2 { color: #E50914; margin-top: 30px; }
-        a { color: #E50914; text-decoration: none; }
+        h1 { color: #ffffff; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        h2 { color: var(--primary-color); margin-top: 40px; font-size: 1.4em; }
+        h3 { color: #ffffff; margin-top: 30px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        a { color: var(--primary-color); text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .date { color: #888; font-style: italic; }
+        .header-link { display: inline-block; margin-bottom: 30px; font-weight: bold; }
+        
+        .warning-box {
+            background-color: rgba(229, 9, 20, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Privacy Policy for SmartStream</h1>
-    <p><strong>Last Updated:</strong> March 2026</p>
+    <a href="index.html" class="header-link">&larr; Back to SmartStream Home</a>
 
-    <p>Your privacy is critically important to us. This Privacy Policy explains how the SmartStream application ("the App") handles your data.</p>
+    <h1>Privacy Policy</h1>
+    <p class="date">Last Updated: March 2026</p>
 
-    <h2>1. Google Drive Data (OAuth)</h2>
-    <p>SmartStream uses the Google Drive API (`https://www.googleapis.com/auth/drive.file` scope) exclusively to backup and restore your personal app settings, watch history, and profiles. 
-    <strong>We do not have access to your Google Drive.</strong> The App can only see and modify the specific backup files that the App itself creates.</p>
+    <h2>1. Data Collection & Control</h2>
+    <p>Our application is designed as a "Bring Your Own Data" (BYOD) utility. We do not host, store, or see your media content.</p>
+    <ul>
+        <li><strong>User-Provided Keys:</strong> You provide your own Google Gemini API and Google Drive credentials. This data is stored locally on your device and encrypted.</li>
+        <li><strong>No Third-Party Tracking:</strong> We do not sell your viewing habits to advertisers. Your ratings and watch history stay within your private Google Cloud environment.</li>
+    </ul>
 
-    <h2>2. Data Storage & Sharing</h2>
-    <p>All data is processed and encrypted locally on your device before being synced to your own personal Google Drive account. We do not operate external servers, we do not collect telemetry, and <strong>we absolutely do not sell, rent, or share your data with third parties.</strong></p>
+    <h2>2. Encryption and Security</h2>
+    <ul>
+        <li><strong>In-Transit:</strong> All communication between the app and external APIs (TMDB, Google Cloud, IPTV Providers) is forced via HTTPS (TLS 1.3).</li>
+        <li><strong>At-Rest:</strong> Your configuration files and PIN-protected folders are encrypted using AES-256 bit encryption.</li>
+    </ul>
 
-    <h2>3. Your Consent</h2>
-    <p>By using the Cloud Sync feature in SmartStream, you consent to the app communicating directly with your Google account strictly for the purpose of backing up your personal configuration.</p>
+    <h2>3. Third-Party Services</h2>
+    <p>By using the AI recommendation and cloud sync features, you interact with:</p>
+    <ul>
+        <li><strong>Google Gemini API:</strong> To generate metadata and recommendations.</li>
+        <li><strong>Google Drive:</strong> To store your personal backup and sync files.</li>
+        <li><strong>TMDB:</strong> To fetch movie and series posters and descriptions.</li>
+    </ul>
+    <p><em>Please refer to these providers' respective privacy policies for how they handle data on their end.</em></p>
 
-    <h2>4. Contact Us</h2>
-    <p>If you have any questions regarding this Privacy Policy, you may contact the developer at: <br>
-    <a href="mailto:YOUR_EMAIL_HERE@kongedam.dk">YOUR_EMAIL_HERE@kongedam.dk</a></p>
+    <hr style="border: 0; border-top: 1px solid #333; margin: 60px 0 40px;">
 
-    <br>
-    <p><a href="index.html">&larr; Back to Home</a></p>
+    <h1>Technical Disclaimer & Terms of Use</h1>
+
+    <div class="warning-box">
+        <strong>IMPORTANT:</strong> SmartStream does not provide, host, or link to any media content or IPTV subscriptions.
+    </div>
+
+    <h3>1. User Responsibility</h3>
+    <p>This application is a media management tool. It requires the user to have their own valid IPTV subscription (Xtream/M3U) and API keys. The user is solely responsible for ensuring that the content they access via the app is legal and does not infringe on copyrights in their jurisdiction.</p>
+
+    <h3>2. No Content Provided</h3>
+    <p>We do not sell subscriptions, "m3u lists," or access to any television channels or movies. We have no affiliation with any third-party IPTV providers.</p>
+
+    <h3>3. AI and Metadata Accuracy</h3>
+    <p>The app uses AI (Google Gemini) and TMDB to provide information about your media. While we strive for accuracy, we cannot guarantee that the metadata, ratings, or suggestions generated by the AI will be 100% accurate or appropriate for all audiences.</p>
+
+    <h3>4. Parental Controls</h3>
+    <p>The app includes an "XXX" folder categorization feature for adult content. It is the user's responsibility to set a secure PIN to prevent unauthorized access by minors.</p>
+
 </div>
 
 </body>

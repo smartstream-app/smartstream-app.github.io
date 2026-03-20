@@ -3,35 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStream App</title>
+    <title>SmartStream | AI-Powered Media Dashboard</title>
     <style>
+        :root {
+            --bg-color: #111111;
+            --surface-color: #1a1a1a;
+            --primary-color: #E50914;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+        }
         body {
-            background-color: #111111;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 100vh;
+            line-height: 1.6;
         }
-        h1 { color: #E50914; font-size: 3em; margin-bottom: 10px; }
-        p { color: #AAAAAA; font-size: 1.2em; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.5; }
-        .footer-links { margin-top: 40px; }
-        a { color: #E50914; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+        h1 { color: var(--primary-color); font-size: 3.5em; margin-bottom: 10px; letter-spacing: -1px; }
+        .subtitle { font-size: 1.4em; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+        
+        .hero-image-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+            background-color: #222;
+            min-height: 200px; /* Placeholder height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-image-container img { width: 100%; display: block; }
+        .img-placeholder-text { color: #555; font-style: italic; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .feature-card {
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-color);
+        }
+        .feature-card h3 { font-size: 1.5em; margin-top: 0; }
+        .feature-card ul { padding-left: 20px; color: var(--text-muted); }
+        .feature-card li { margin-bottom: 10px; }
+
+        .feature-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #222;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-image img { width: 100%; border-radius: 8px; }
+
+        .tech-highlights {
+            background-color: var(--surface-color);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .tech-highlights h2 { color: var(--primary-color); margin-bottom: 30px; }
+        .tech-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .tech-item { max-width: 250px; text-align: left; }
+        .tech-item h4 { margin-bottom: 5px; }
+        .tech-item p { color: var(--text-muted); font-size: 0.9em; margin-top: 0; }
+        
+        .disclaimer-box {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid #333; margin-top: 40px; }
+        footer a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <h1>SmartStream</h1>
-    <p>The ultimate media streaming dashboard for your Fire TV. Securely sync your settings and profiles using your own personal Google Drive.</p>
-    
-    <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
+    <header>
+        <h1>SmartStream</h1>
+        <p class="subtitle">Transform your IPTV subscription into a high-end, AI-powered streaming library. Whether you connect via Xtream Codes or M3U, this app organizes your movies and series into a beautiful, metadata-rich interface.</p>
+    </header>
+
+    <!-- Upload an image named 'hero.png' to GitHub to replace this placeholder -->
+    <div class="hero-image-container">
+        <img src="hero.png" alt="SmartStream Dashboard Interface" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="img-placeholder-text" style="display:none;">[ Upload 'hero.png' to display main dashboard image here ]</span>
     </div>
+
+    <div class="container">
+        <div class="features-grid">
+            
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <h3>🎥 Intelligent Library</h3>
+                <p style="color: var(--text-muted);">Stop scrolling through endless lists. Our engine automatically categorizes your content and pulls high-quality metadata from TMDB.</p>
+                <ul>
+                    <li><strong>Missing Data?</strong> Integrated AI fills the gaps, ensuring every title has a description, poster, and cast info.</li>
+                    <li><strong>Multilingual:</strong> Fetch metadata in your preferred language automatically.</li>
+                    <li><strong>Smart Filtering:</strong> Sort by genre, language, year, rating, or alphabetical order.</li>
+                </ul>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <!-- Upload an image named 'ai-feature.png' to GitHub -->
+                <div class="feature-image">
+                    <img src="ai-feature.png" alt="AI Features" onerror="this.style.display='none';">
+                </div>
+                <h3>🧠 AI-Powered Discovery</h3>
+                <p style="color: var(--text-muted);">Your library learns from you. By providing your own Google Gemini API key, the app analyzes your ratings to suggest your next favorite binge-watch. It’s a truly personalized recommendation engine fueled by your unique tastes.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                 <!-- Upload an image named 'sync-feature.png' to GitHub -->
+                 <div class="feature-image">
+                    <img src="sync-feature.png" alt="Cloud Sync Features" onerror="this.style.display='none';">
+                </div>
+                <h3>🏠 Whole-Home Sync</h3>
+                <p style="color: var(--text-muted);">Experience seamless transitions between rooms with zero tedious setups.</p>
+                <ul>
+                    <li><strong>Cross-Device Resume:</strong> Start a movie in the living room and pick up exactly where you left off in the bedroom.</li>
+                    <li><strong>Cloud Backup:</strong> Connect your Google Drive to instantly sync preferences, ratings, and metadata to any new TV in your home.</li>
+                </ul>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <h3>🔒 Privacy & Security First</h3>
+                <p style="color: var(--text-muted);">We believe your viewing habits are your business.</p>
+                <ul>
+                    <li><strong>Full Encryption:</strong> Data is protected via HTTPS in transit and AES-256 at rest.</li>
+                    <li><strong>User-Controlled Keys:</strong> Secure your library with a personal PIN.</li>
+                    <li><strong>Discreet Content:</strong> Adult content is automatically moved to a secure XXX folder with full metadata support.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tech-highlights">
+        <h2>Technical Highlights</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <h4>Protocols</h4>
+                <p>Full Xtream UI & M3U URL support.</p>
+            </div>
+            <div class="tech-item">
+                <h4>Customization</h4>
+                <p>Create and manage your own custom watchlists.</p>
+            </div>
+            <div class="tech-item">
+                <h4>Storage</h4>
+                <p>Securely uses your own Google Cloud for data portability.</p>
+            </div>
+        </div>
+        
+        <div class="disclaimer-box">
+            <strong>Note:</strong> This app does not provide content. Users must provide their own IPTV service credentials and API keys.
+        </div>
+    </div>
+
+    <footer>
+        <a href="privacy-policy.html">Privacy Policy & Terms of Use</a>
+        <p style="color: #666; font-size: 0.8em; margin-top: 20px;">&copy; 2026 SmartStream. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
