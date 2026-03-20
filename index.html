@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStream | AI-Powered Media Dashboard</title>
-    <!-- Links to your external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Image Loader Library required for the slider -->
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -49,184 +46,25 @@
         </div>
     </div>
 
-    <!-- The 3D Voyage Slider Gallery -->
-    <div class="slider-section">
-        <div class="slider-container">
-            <div class="slider">
-                <button class="slider--btn slider--btn__prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m15 18-6-6 6-6" />
-                    </svg>
-                </button>
-
-                <div class="slides__wrapper">
-                    <div class="slides">
-                        <!-- slide 1 -->
-                        <div class="slide" data-current>
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="movie_browser.png" alt="Dashboard" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('movie_browser.png'); --dir: 0" data-current></div>
-
-                        <!-- slide 2 -->
-                        <div class="slide" data-next>
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="movie_details.png" alt="Details" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('movie_details.png'); --dir: 1" data-next></div>
-
-                        <!-- slide 3 -->
-                        <div class="slide">
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="playback_menu.png" alt="Playback" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('playback_menu.png');"></div>
-
-                        <!-- slide 4 -->
-                        <div class="slide">
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="gemini_ai_engine.png" alt="AI Engine" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('gemini_ai_engine.png');"></div>
-
-                        <!-- slide 5 -->
-                        <div class="slide">
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="cloud_sync.png" alt="Cloud Sync" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('cloud_sync.png');"></div>
-
-                        <!-- slide 6 -->
-                        <div class="slide">
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="subtitle_preferences.png" alt="Subtitles" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('subtitle_preferences.png');"></div>
-
-                        <!-- slide 7 -->
-                        <div class="slide">
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="tmdb_language_settings.png" alt="Language" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('tmdb_language_settings.png');"></div>
-
-                        <!-- slide 8 -->
-                        <div class="slide" data-previous>
-                            <div class="slide__inner">
-                                <div class="slide--image__wrapper"><img class="slide--image" src="library_update.png" alt="Library Update" /></div>
-                            </div>
-                        </div>
-                        <div class="slide__bg" style="--bg: url('library_update.png'); --dir: -1" data-previous></div>
-                    </div>
-                    
-                    <div class="slides--infos">
-                        <!-- Slide Info 1 -->
-                        <div class="slide-info" data-current>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Dashboard</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>SmartStream</span></div>
-                                    <div data-description class="slide-info--text"><span>Intelligent Library Management</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 2 -->
-                        <div class="slide-info" data-next>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Metadata</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>Rich Details</span></div>
-                                    <div data-description class="slide-info--text"><span>High-quality cast and crew info</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 3 -->
-                        <div class="slide-info">
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Playback</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>4K UHD</span></div>
-                                    <div data-description class="slide-info--text"><span>Advanced viewing controls</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 4 -->
-                        <div class="slide-info">
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Personalized</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>Gemini AI</span></div>
-                                    <div data-description class="slide-info--text"><span>Tailored recommendations</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 5 -->
-                        <div class="slide-info">
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Backup</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>Cloud Sync</span></div>
-                                    <div data-description class="slide-info--text"><span>Google Drive integration</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 6 -->
-                        <div class="slide-info">
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Subtitles</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>Appearance</span></div>
-                                    <div data-description class="slide-info--text"><span>Customize your viewing experience</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 7 -->
-                        <div class="slide-info">
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Localization</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>TMDB Settings</span></div>
-                                    <div data-description class="slide-info--text"><span>Native language support</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 8 -->
-                        <div class="slide-info" data-previous>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text"><span>Fast Scans</span></div>
-                                    <div data-subtitle class="slide-info--text"><span>Library Update</span></div>
-                                    <div data-description class="slide-info--text"><span>Background metadata batching</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="slider--btn slider--btn__next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m9 18 6-6-6-6" />
-                    </svg>
-                </button>
+    <!-- The Premium Netflix-Style Slider -->
+    <div class="gallery-section">
+        <h2>Built for the Big Screen</h2>
+        
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" id="btnPrev" aria-label="Previous slide">&#10094;</button>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <img src="movie_browser.png" class="carousel-slide" alt="Dashboard">
+                <img src="movie_details.png" class="carousel-slide" alt="Movie Details">
+                <img src="playback_menu.png" class="carousel-slide" alt="Playback Menu">
+                <img src="gemini_ai_engine.png" class="carousel-slide" alt="AI Engine">
+                <img src="cloud_sync.png" class="carousel-slide" alt="Cloud Sync">
+                <img src="subtitle_preferences.png" class="carousel-slide" alt="Subtitles">
+                <img src="tmdb_language_settings.png" class="carousel-slide" alt="Language Settings">
+                <img src="library_update.png" class="carousel-slide" alt="Library Update">
             </div>
 
-            <div class="loader">
-                <span class="loader__text">0%</span>
-            </div>
+            <button class="carousel-btn next" id="btnNext" aria-label="Next slide">&#10095;</button>
         </div>
     </div>
 
@@ -267,8 +105,6 @@
         <p style="color: #666; font-size: 0.8em; margin-top: 20px;">&copy; 2026 SmartStream. All rights reserved.</p>
     </footer>
 
-    <!-- Links to your external JavaScript file -->
     <script src="script.js"></script>
-
 </body>
 </html>
