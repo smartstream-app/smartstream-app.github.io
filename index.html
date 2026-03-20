@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStream | AI-Powered Media Dashboard</title>
-    <!-- Links to your new external CSS file -->
+    <!-- Links to your external CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Image Loader Library required for the slider -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -47,51 +49,183 @@
         </div>
     </div>
 
-    <!-- The Ripple Effect Slider -->
-    <div class="gallery-section">
-        <h2>Built for the Big Screen</h2>
-        <div class='parent'>
-            <div class='slider'>
-                <button type="button" id='right' class='right' name="button">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 477.175 477.175">
-                        <path style='fill: #9d9d9d;' d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/>
+    <!-- The 3D Voyage Slider Gallery -->
+    <div class="slider-section">
+        <div class="slider-container">
+            <div class="slider">
+                <button class="slider--btn slider--btn__prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
                     </svg>
                 </button>
-                <button type="button" id='left' class='left' name="button">
-                    <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 477.175 477.175">
-                        <path style='fill: #9d9d9d;' d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/>
+
+                <div class="slides__wrapper">
+                    <div class="slides">
+                        <!-- slide 1 -->
+                        <div class="slide" data-current>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="movie_browser.png" alt="Dashboard" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('movie_browser.png'); --dir: 0" data-current></div>
+
+                        <!-- slide 2 -->
+                        <div class="slide" data-next>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="movie_details.png" alt="Details" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('movie_details.png'); --dir: 1" data-next></div>
+
+                        <!-- slide 3 -->
+                        <div class="slide">
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="playback_menu.png" alt="Playback" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('playback_menu.png');"></div>
+
+                        <!-- slide 4 -->
+                        <div class="slide">
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="gemini_ai_engine.png" alt="AI Engine" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('gemini_ai_engine.png');"></div>
+
+                        <!-- slide 5 -->
+                        <div class="slide">
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="cloud_sync.png" alt="Cloud Sync" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('cloud_sync.png');"></div>
+
+                        <!-- slide 6 -->
+                        <div class="slide">
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="subtitle_preferences.png" alt="Subtitles" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('subtitle_preferences.png');"></div>
+
+                        <!-- slide 7 -->
+                        <div class="slide">
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="tmdb_language_settings.png" alt="Language" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('tmdb_language_settings.png');"></div>
+
+                        <!-- slide 8 -->
+                        <div class="slide" data-previous>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper"><img class="slide--image" src="library_update.png" alt="Library Update" /></div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" style="--bg: url('library_update.png'); --dir: -1" data-previous></div>
+                    </div>
+                    
+                    <div class="slides--infos">
+                        <!-- Slide Info 1 -->
+                        <div class="slide-info" data-current>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Dashboard</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>SmartStream</span></div>
+                                    <div data-description class="slide-info--text"><span>Intelligent Library Management</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 2 -->
+                        <div class="slide-info" data-next>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Metadata</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>Rich Details</span></div>
+                                    <div data-description class="slide-info--text"><span>High-quality cast and crew info</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 3 -->
+                        <div class="slide-info">
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Playback</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>4K UHD</span></div>
+                                    <div data-description class="slide-info--text"><span>Advanced viewing controls</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 4 -->
+                        <div class="slide-info">
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Personalized</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>Gemini AI</span></div>
+                                    <div data-description class="slide-info--text"><span>Tailored recommendations</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 5 -->
+                        <div class="slide-info">
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Backup</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>Cloud Sync</span></div>
+                                    <div data-description class="slide-info--text"><span>Google Drive integration</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 6 -->
+                        <div class="slide-info">
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Subtitles</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>Appearance</span></div>
+                                    <div data-description class="slide-info--text"><span>Customize your viewing experience</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 7 -->
+                        <div class="slide-info">
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Localization</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>TMDB Settings</span></div>
+                                    <div data-description class="slide-info--text"><span>Native language support</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 8 -->
+                        <div class="slide-info" data-previous>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text"><span>Fast Scans</span></div>
+                                    <div data-subtitle class="slide-info--text"><span>Library Update</span></div>
+                                    <div data-description class="slide-info--text"><span>Background metadata batching</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider--btn slider--btn__next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
                     </svg>
                 </button>
-                <svg id='svg2' class='up2' xmlns="http://www.w3.org/2000/svg">
-                    <circle id='circle1' class='circle1 steap' cx="34px" cy="49%" r="20" />
-                    <circle id='circle2' class='circle2 steap' cx="34px" cy="49%" r="100" />
-                    <circle id='circle3' class='circle3 steap' cx="34px" cy="49%" r="180" />
-                    <circle id='circle4' class='circle4 steap' cx="34px" cy="49%" r="260" />
-                    <circle id='circle5' class='circle5 steap' cx="34px" cy="49%" r="340" />
-                    <circle id='circle6' class='circle6 steap' cx="34px" cy="49%" r="420" />
-                    <circle id='circle7' class='circle7 steap' cx="34px" cy="49%" r="500" />
-                    <circle id='circle8' class='circle8 steap' cx="34px" cy="49%" r="580" />
-                    <circle id='circle9' class='circle9 steap' cx="34px" cy="49%" r="660" />
-                </svg>
-                <svg id='svg1' class='up2' xmlns="http://www.w3.org/2000/svg">
-                    <circle id='circle10' class='circle10 steap' cx="648px" cy="49%" r="20" />
-                    <circle id='circle11' class='circle11 steap' cx="648px" cy="49%" r="100" />
-                    <circle id='circle12' class='circle12 steap' cx="648px" cy="49%" r="180" />
-                    <circle id='circle13' class='circle13 steap' cx="648px" cy="49%" r="260" />
-                    <circle id='circle14' class='circle14 steap' cx="648px" cy="49%" r="340" />
-                    <circle id='circle15' class='circle15 steap' cx="648px" cy="49%" r="420" />
-                    <circle id='circle16' class='circle16 steap' cx="648px" cy="49%" r="500" />
-                    <circle id='circle17' class='circle17 steap' cx="648px" cy="49%" r="580" />
-                    <circle id='circle18' class='circle18 steap' cx="648px" cy="49%" r="660" />
-                </svg>
-                <div id='slide1' class='slide-item slide1 up1'></div>
-                <div id='slide2' class='slide-item slide2'></div>
-                <div id='slide3' class='slide-item slide3'></div>
-                <div id='slide4' class='slide-item slide4'></div>
-                <div id='slide5' class='slide-item slide5'></div>
-                <div id='slide6' class='slide-item slide6'></div>
-                <div id='slide7' class='slide-item slide7'></div>
-                <div id='slide8' class='slide-item slide8'></div>
+            </div>
+
+            <div class="loader">
+                <span class="loader__text">0%</span>
             </div>
         </div>
     </div>
@@ -133,7 +267,7 @@
         <p style="color: #666; font-size: 0.8em; margin-top: 20px;">&copy; 2026 SmartStream. All rights reserved.</p>
     </footer>
 
-    <!-- Links to your new external JavaScript file -->
+    <!-- Links to your external JavaScript file -->
     <script src="script.js"></script>
 
 </body>
