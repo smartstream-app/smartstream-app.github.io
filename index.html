@@ -19,6 +19,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden; /* Prevents horizontal scrollbars */
         }
         
         /* Layout Containers */
@@ -45,7 +46,7 @@
         }
         .feature-card h3 { font-size: 1.5em; margin-top: 0; }
         .feature-card p { color: var(--text-muted); }
-        .feature-card ul { padding-left: 20px; color: var(--text-muted); }
+        .feature-card ul { padding-left: 20px; color: var(--text-muted); margin-top: 15px; }
         .feature-card li { margin-bottom: 10px; }
         .feature-image { width: 100%; border-radius: 8px; margin-bottom: 20px; border: 1px solid #333; display: block; }
 
@@ -57,23 +58,53 @@
         .privacy-list li { margin-bottom: 10px; }
         .privacy-list strong { color: #fff; }
 
-        /* Static Image Gallery (No JS!) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Continuous Edge-to-Edge Marquee Gallery */
+        .marquee-section {
+            background-color: #0a0a0a;
+            padding: 60px 0;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            
+            /* Forces the background to span 100% of the screen width */
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
         }
-        .gallery-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #333;
+        .marquee-container {
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .marquee-track {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            animation: scrollMarquee 40s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused; /* Pauses animation on mouse hover */
+        }
+        .marquee-group {
+            display: flex;
+            gap: 30px;
+        }
+        .marquee-group img {
+            height: 280px; /* Forces all images to be exactly 1 line tall */
+            width: auto;
+            border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+            cursor: pointer;
         }
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr; }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            /* Shifts exactly half the track width minus half the gap for a perfect infinite loop */
+            100% { transform: translateX(calc(-50% - 15px)); } 
+        }
+        @media (max-width: 768px) {
+            .marquee-group img { height: 180px; } /* Scales down for mobile phones */
         }
 
         /* Download Section */
@@ -148,19 +179,36 @@
 
     </div>
 
-    <!-- Static Image Gallery -->
-    <div class="section-dark">
-        <div class="container">
-            <h2 style="color: #fff; margin-top: 0; margin-bottom: 40px; font-size: 2em;">Built for the Big Screen</h2>
-            <div class="gallery-grid">
-                <img src="movie_browser.png" alt="Dashboard">
-                <img src="movie_details.png" alt="Movie Details">
-                <img src="playback_menu.png" alt="Playback Menu">
-                <img src="gemini_ai_engine.png" alt="AI Engine Setup">
-                <img src="cloud_sync.png" alt="Cloud Sync">
-                <img src="subtitle_preferences.png" alt="Subtitle Preferences">
-                <img src="tmdb_language_settings.png" alt="Language Settings">
-                <img src="library_update.png" alt="Library Update">
+    <!-- Continuous Edge-to-Edge Marquee Gallery -->
+    <div class="marquee-section">
+        <h2 style="color: #fff; margin-top: 0; margin-bottom: 40px; font-size: 2em; text-align: center;">Built for the Big Screen</h2>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                
+                <!-- Group 1 -->
+                <div class="marquee-group">
+                    <img src="movie_browser.png" alt="Dashboard">
+                    <img src="movie_details.png" alt="Movie Details">
+                    <img src="playback_menu.png" alt="Playback Menu">
+                    <img src="gemini_ai_engine.png" alt="AI Engine Setup">
+                    <img src="cloud_sync.png" alt="Cloud Sync">
+                    <img src="subtitle_preferences.png" alt="Subtitle Preferences">
+                    <img src="tmdb_language_settings.png" alt="Language Settings">
+                    <img src="library_update.png" alt="Library Update">
+                </div>
+
+                <!-- Group 2 (Exact Duplicate to create the infinite loop) -->
+                <div class="marquee-group">
+                    <img src="movie_browser.png" alt="Dashboard">
+                    <img src="movie_details.png" alt="Movie Details">
+                    <img src="playback_menu.png" alt="Playback Menu">
+                    <img src="gemini_ai_engine.png" alt="AI Engine Setup">
+                    <img src="cloud_sync.png" alt="Cloud Sync">
+                    <img src="subtitle_preferences.png" alt="Subtitle Preferences">
+                    <img src="tmdb_language_settings.png" alt="Language Settings">
+                    <img src="library_update.png" alt="Library Update">
+                </div>
+
             </div>
         </div>
     </div>
