@@ -19,10 +19,11 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
             text-align: center;
-            padding: 60px 20px 30px;
+            padding: 60px 20px 40px;
         }
         .logo {
             max-width: 350px;
@@ -31,24 +32,14 @@
         }
         .subtitle { font-size: 1.3em; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
         
-        .hero-image-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            border: 1px solid #333;
-            background-color: #222;
-        }
-        .hero-image-container img { width: 100%; display: block; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 20px 0; }
         
+        /* 3-Column Features Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         .feature-card {
             background-color: var(--surface-color);
@@ -57,6 +48,7 @@
             border-top: 4px solid var(--primary-color);
             display: flex;
             flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
         .feature-card h3 { font-size: 1.5em; margin-top: 0; }
         .feature-card ul { padding-left: 20px; color: var(--text-muted); margin-top: auto;}
@@ -72,34 +64,146 @@
         }
         .feature-image img { width: 100%; display: block; }
 
+        /* Centered Privacy Text Section */
+        .privacy-section {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .privacy-section h3 {
+            font-size: 1.8em;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+        .privacy-section p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .privacy-list {
+            text-align: left;
+            display: inline-block;
+            color: var(--text-muted);
+        }
+        .privacy-list li { margin-bottom: 10px; }
+        .privacy-list strong { color: #fff; }
+
+        /* Fancy Scrollable Gallery */
         .gallery-section {
             background-color: #151515;
-            padding: 60px 20px;
+            padding: 60px 0;
             text-align: center;
             border-top: 1px solid #222;
             border-bottom: 1px solid #222;
         }
         .gallery-section h2 { color: #fff; margin-bottom: 40px; font-size: 2em; }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
             gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 20px 5vw 40px 5vw;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
         }
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 8px;
+        .gallery-container::-webkit-scrollbar { height: 12px; }
+        .gallery-container::-webkit-scrollbar-track { background: #111; border-radius: 10px; }
+        .gallery-container::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; border: 3px solid #111; }
+        .gallery-container::-webkit-scrollbar-thumb:hover { background: var(--primary-color); }
+
+        .gallery-item {
+            flex: 0 0 80%;
+            max-width: 800px;
+            scroll-snap-align: center;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
             border: 1px solid #333;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
             transition: transform 0.3s ease;
         }
-        .gallery-grid img:hover { transform: scale(1.02); }
+        .gallery-item:hover { transform: translateY(-5px); }
+        .gallery-item img { width: 100%; height: auto; display: block; }
 
+        /* Download Section with QR Codes */
+        .download-section {
+            background-color: var(--surface-color);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+        .download-section h2 { color: #fff; font-size: 2.2em; margin-bottom: 10px; }
+        .download-section > p { color: var(--text-muted); font-size: 1.1em; margin-bottom: 40px; }
+        .store-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .store-card {
+            background-color: #111;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .qr-placeholder {
+            width: 160px;
+            height: 160px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .qr-placeholder img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .store-card h4 { color: var(--primary-color); margin: 0 0 5px 0; font-size: 1.3em; }
+        .store-card p { color: var(--text-muted); font-size: 0.9em; margin: 0; }
+
+        /* Support & Issues Section */
+        .support-section {
+            background-color: var(--bg-color);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .support-section h2 { color: #fff; font-size: 2em; margin-bottom: 15px; }
+        .support-section p { color: var(--text-muted); font-size: 1.1em; max-width: 600px; margin: 0 auto 30px auto; }
+        .btn-issue {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-issue:hover {
+            background-color: #ff0f1f;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Tech Highlights */
         .tech-highlights {
             background-color: var(--surface-color);
             padding: 60px 20px;
             text-align: center;
+            border-top: 1px solid #222;
         }
         .tech-highlights h2 { color: var(--primary-color); margin-bottom: 30px; }
         .tech-grid {
@@ -129,8 +233,8 @@
         footer a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; }
         footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .gallery-item { flex: 0 0 95%; }
         }
     </style>
 </head>
@@ -138,22 +242,19 @@
 
     <header>
         <img src="smartstream_logo.png" alt="SmartStream Logo" class="logo">
-        <p class="subtitle">Transform your IPTV subscription into a high-end, AI-powered streaming library. Whether you connect via Xtream Codes or M3U, this app organizes your movies and series into a beautiful, metadata-rich interface.</p>
+        <p class="subtitle">Transform your IPTV subscription into a high-end, AI-powered streaming library. Connect securely via Xtream Codes to organize your movies and series into a beautiful, metadata-rich interface.</p>
     </header>
 
-    <div class="hero-image-container">
-        <img src="movie_browser.png" alt="SmartStream Dashboard Interface">
-    </div>
-
     <div class="container">
+        <!-- Top 3 Features Grid -->
         <div class="features-grid">
             
             <div class="feature-card">
                 <div class="feature-image">
-                    <img src="library_update.png" alt="Library Update Process">
+                    <img src="movie_browser.png" alt="Intelligent Library Management">
                 </div>
                 <h3>🎥 Intelligent Library Management</h3>
-                <p style="color: var(--text-muted);">Stop scrolling through endless lists. Our engine automatically categorizes your content and pulls high-quality metadata from TMDB.</p>
+                <p style="color: var(--text-muted);">Stop scrolling through endless lists. Our engine automatically categorizes your movies and series and pulls high-quality metadata from TMDB.</p>
                 <ul>
                     <li><strong>Missing Data?</strong> Integrated AI fills the gaps, ensuring every title has a description, poster, and cast info.</li>
                     <li><strong>Multilingual Support:</strong> Fetch metadata in your preferred language automatically.</li>
@@ -180,29 +281,65 @@
                 </ul>
             </div>
 
-            <div class="feature-card">
-                 <div class="feature-image">
-                    <img src="tmdb_language_settings.png" alt="Language and Privacy Settings">
+        </div>
+
+        <!-- Centered Privacy Section -->
+        <div class="privacy-section">
+            <h3>🔒 Privacy & Security First</h3>
+            <p>We believe your viewing habits are your business.</p>
+            <ul class="privacy-list">
+                <li><strong>Full Encryption:</strong> Data is protected via HTTPS in transit and AES-256 at rest.</li>
+                <li><strong>User-Controlled Keys:</strong> Secure your library with a personal PIN.</li>
+                <li><strong>Discreet Content:</strong> Adult content is automatically moved to a secure XXX folder with full metadata support.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fancy Scrollable Gallery -->
+    <div class="gallery-section">
+        <h2>Built for the Big Screen</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="movie_browser.png" alt="SmartStream Dashboard Interface"></div>
+            <div class="gallery-item"><img src="movie_details.png" alt="Rich Movie Details and Cast Information"></div>
+            <div class="gallery-item"><img src="playback_menu.png" alt="Advanced Playback Menu and Video Controls"></div>
+            <div class="gallery-item"><img src="gemini_ai_engine.png" alt="Gemini AI Engine Setup"></div>
+            <div class="gallery-item"><img src="cloud_sync.png" alt="Cloud Sync Settings"></div>
+            <div class="gallery-item"><img src="subtitle_preferences.png" alt="Customizable Subtitle Appearance"></div>
+            <div class="gallery-item"><img src="tmdb_language_settings.png" alt="TMDB Database Language"></div>
+            <div class="gallery-item"><img src="library_update.png" alt="Library Update Process"></div>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download-section">
+        <h2>Get SmartStream Today</h2>
+        <p>Scan the QR codes below to download directly to your device.</p>
+        <div class="store-grid">
+            
+            <div class="store-card">
+                <div class="qr-placeholder">
+                    <img src="google_play_qr.png" alt="Google Play QR Code" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; text-align: center; font-size: 0.8em; font-style: italic;\'>Upload google_play_qr.png</span>';">
                 </div>
-                <h3>🔒 Privacy & Security First</h3>
-                <p style="color: var(--text-muted);">We believe your viewing habits are your business.</p>
-                <ul>
-                    <li><strong>Full Encryption:</strong> Data is protected via HTTPS in transit and AES-256 at rest.</li>
-                    <li><strong>User-Controlled Keys:</strong> Secure your library with a personal PIN.</li>
-                    <li><strong>Discreet Content:</strong> Adult content is automatically moved to a secure XXX folder with full metadata support.</li>
-                </ul>
+                <h4>Google Play Store</h4>
+                <p>For Android TV & Google TV</p>
+            </div>
+
+            <div class="store-card">
+                <div class="qr-placeholder">
+                    <img src="amazon_store_qr.png" alt="Amazon Appstore QR Code" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; text-align: center; font-size: 0.8em; font-style: italic;\'>Upload amazon_store_qr.png</span>';">
+                </div>
+                <h4>Amazon Appstore</h4>
+                <p>For Fire TV Stick & Fire OS</p>
             </div>
 
         </div>
     </div>
 
-    <div class="gallery-section">
-        <h2>Built for the Big Screen</h2>
-        <div class="gallery-grid">
-            <img src="movie_details.png" alt="Rich Movie Details and Cast Information">
-            <img src="playback_menu.png" alt="Advanced Playback Menu and Video Controls">
-            <img src="subtitle_preferences.png" alt="Customizable Subtitle Appearance">
-        </div>
+    <!-- Support & Issues Section -->
+    <div class="support-section">
+        <h2>Help Shape SmartStream</h2>
+        <p>Found a bug or have a great idea for a new feature? Let us know! You can easily submit requests and attach screenshots directly on our community board.</p>
+        <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" class="btn-issue">Report a Bug or Request a Feature</a>
     </div>
 
     <div class="tech-highlights">
@@ -210,7 +347,7 @@
         <div class="tech-grid">
             <div class="tech-item">
                 <h4>Protocols</h4>
-                <p>Full Xtream UI & M3U URL support.</p>
+                <p>Full Xtream Codes API support.</p>
             </div>
             <div class="tech-item">
                 <h4>Customization</h4>
