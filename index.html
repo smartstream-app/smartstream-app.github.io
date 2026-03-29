@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStream | AI-Powered Media Dashboard</title>
     <meta name="google-site-verification" content="OsYwuvQh9HbFlJ-wjhBIC32UWA3qnD6XdWteVU8zVk4" />
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Custom Configuration for SmartStream Theme -->
     <script>
         tailwind.config = {
             theme: {
@@ -27,7 +25,6 @@
         }
     </script>
 
-    <!-- Custom CSS strictly for the infinite marquee animation -->
     <style>
         .marquee-track {
             display: flex;
@@ -45,9 +42,7 @@
 </head>
 <body class="bg-darkbg text-white font-sans antialiased overflow-x-hidden selection:bg-brand selection:text-white">
 
-    <!-- HERO SECTION -->
     <header class="relative pt-20 pb-16 px-6 lg:pt-32 lg:pb-24 max-w-7xl mx-auto text-center">
-        <!-- Background subtle glow -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand/20 blur-[120px] rounded-full pointer-events-none"></div>
         
         <img src="smartstream_logo.png" alt="SmartStream Logo" class="relative z-10 mx-auto h-16 md:h-24 mb-8 object-contain">
@@ -69,19 +64,15 @@
             </a>
         </div>
 
-        <!-- Hero Image Showcase -->
         <div class="mt-20 relative max-w-5xl mx-auto group perspective-1000">
-            <!-- Glowing border effect -->
             <div class="absolute -inset-1 bg-gradient-to-b from-brand to-darkbg rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
             <img src="movie_browser.png" alt="Dashboard Interface" class="relative rounded-xl border border-bordercol shadow-2xl w-full">
         </div>
     </header>
 
-    <!-- ZIG-ZAG FEATURE SECTION -->
     <section class="py-24 px-6 border-t border-bordercol bg-black">
         <div class="max-w-7xl mx-auto space-y-32">
             
-            <!-- Feature 1 -->
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <div class="flex-1 space-y-6">
                     <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
@@ -93,6 +84,7 @@
                         <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>AI Gap Filling:</strong> Ensures every title has rich metadata.</li>
                         <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Multilingual:</strong> Fetch data in your native language.</li>
                         <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Smart Filters:</strong> Sort by genre, year, rating, and more.</li>
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Interactive Cast:</strong> Click any actor to instantly discover all their movies and series.</li>
                     </ul>
                 </div>
                 <div class="flex-1 relative group w-full">
@@ -101,7 +93,6 @@
                 </div>
             </div>
 
-            <!-- Feature 2 (Reversed) -->
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                 <div class="flex-1 space-y-6">
                     <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
@@ -117,7 +108,6 @@
                 </div>
             </div>
 
-            <!-- Feature 3 -->
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <div class="flex-1 space-y-6">
                     <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
@@ -136,7 +126,6 @@
         </div>
     </section>
 
-    <!-- FULL-WIDTH MARQUEE FILMSTRIP -->
     <section class="py-20 bg-darkbg border-y border-bordercol overflow-hidden">
         <div class="text-center mb-12 px-6">
             <h2 class="text-3xl md:text-4xl font-bold">Built for the Big Screen</h2>
@@ -144,12 +133,10 @@
         </div>
         
         <div class="relative w-full">
-            <!-- Left and Right Gradient Fades for depth -->
             <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-darkbg to-transparent z-10 pointer-events-none"></div>
             <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-darkbg to-transparent z-10 pointer-events-none"></div>
             
             <div class="marquee-track gap-6 px-3">
-                <!-- Group 1 -->
                 <div class="flex gap-6">
                     <img src="movie_browser.png" alt="Dashboard" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="movie_details.png" alt="Details" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
@@ -160,7 +147,6 @@
                     <img src="tmdb_language_settings.png" alt="Language" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="library_update.png" alt="Library Update" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                 </div>
-                <!-- Group 2 (Duplicate for Infinite Loop) -->
                 <div class="flex gap-6">
                     <img src="movie_browser.png" alt="Dashboard" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="movie_details.png" alt="Details" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
@@ -175,11 +161,9 @@
         </div>
     </section>
 
-    <!-- PRIVACY & HIGHLIGHTS GRID -->
     <section class="py-24 px-6 bg-black">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Privacy Card -->
             <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
@@ -193,7 +177,6 @@
                 </ul>
             </div>
 
-            <!-- Tech Highlights Card -->
             <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
@@ -210,14 +193,12 @@
         </div>
     </section>
 
-    <!-- DOWNLOAD SECTION -->
     <section id="download" class="py-24 px-6 bg-darkbg border-t border-bordercol text-center">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Get SmartStream Today</h2>
             <p class="text-xl text-gray-400 mb-12">Scan the QR codes below to download directly to your television.</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                <!-- Google Play -->
                 <div class="bg-cardbg border border-bordercol p-8 rounded-2xl w-full max-w-sm hover:-translate-y-2 transition duration-300">
                     <div class="bg-white p-3 rounded-xl w-48 h-48 mx-auto mb-6">
                         <img src="google_play_qr.png" alt="Google Play QR Code" class="w-full h-full object-contain">
@@ -226,7 +207,6 @@
                     <p class="text-gray-400">For Android TV & Google TV</p>
                 </div>
 
-                <!-- Amazon Store -->
                 <div class="bg-cardbg border border-bordercol p-8 rounded-2xl w-full max-w-sm hover:-translate-y-2 transition duration-300">
                     <div class="bg-white p-3 rounded-xl w-48 h-48 mx-auto mb-6">
                         <img src="amazon_store_qr.png" alt="Amazon Appstore QR Code" class="w-full h-full object-contain">
@@ -238,7 +218,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-black py-12 px-6 border-t border-bordercol text-center">
         <div class="max-w-3xl mx-auto">
             <p class="text-gray-500 text-sm mb-6 border border-bordercol p-4 rounded-lg inline-block">
