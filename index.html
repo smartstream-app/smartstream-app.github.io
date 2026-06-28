@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStream | AI-Powered Media Dashboard</title>
     
-    <link rel="icon" type="image/webp" href="ic_launcher_round.webp">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     
     <meta name="google-site-verification" content="OsYwuvQh9HbFlJ-wjhBIC32UWA3qnD6XdWteVU8zVk4" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -403,39 +407,6 @@
         });
 
         document.addEventListener('DOMContentLoaded', initGallery);
-    </script>
-
-    <script>
-        window.addEventListener('load', function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = 64;
-            canvas.height = 64;
-            const ctx = canvas.getContext('2d');
-            const img = new Image();
-            img.src = 'ic_launcher_round.webp';
-
-            img.onload = function() {
-                /* Draw solid white circle backdrop */
-                ctx.fillStyle = '#FFFFFF';
-                ctx.beginPath();
-                ctx.arc(32, 32, 32, 0, Math.PI * 2);
-                ctx.fill();
-
-                /* Draw icon slightly inset for a crisp white border */
-                ctx.drawImage(img, 4, 4, 56, 56);
-
-                try {
-                    const generatedFavicon = canvas.toDataURL('image/png');
-                    let link = document.querySelector('link[rel="icon"]');
-                    if (link) {
-                        link.type = 'image/png';
-                        link.href = generatedFavicon;
-                    }
-                } catch(e) {
-                    console.warn("Local CORS restrictions prevented dynamic favicon generation.");
-                }
-            };
-        });
     </script>
 
 </body>
