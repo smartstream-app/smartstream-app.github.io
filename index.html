@@ -66,7 +66,7 @@
 
         <div class="mt-20 relative max-w-5xl mx-auto group perspective-1000">
             <div class="absolute -inset-1 bg-gradient-to-b from-brand to-darkbg rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-            <img src="movie_browser.png" alt="Dashboard Interface" class="relative rounded-xl border border-bordercol shadow-2xl w-full">
+            <img onclick="openPopup(this.src)" src="movie_browser.png" alt="Dashboard Interface" class="relative rounded-xl border border-bordercol shadow-2xl w-full cursor-pointer hover:opacity-90 transition">
         </div>
     </header>
 
@@ -90,154 +90,8 @@
                 </div>
                 <div class="flex-1 relative group w-full">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="streaming_dashboard.png" alt="SmartStream Dashboard" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
+                    <img onclick="openPopup(this.src)" src="streaming_dashboard.png" alt="SmartStream Dashboard" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
-                <div class="flex-1 space-y-6">
-                    <h2 class="text-3xl md:text-5xl font-bold flex items-start">
-                        <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
-                        </span>
-                        <span>Just Say It: <br>Natural Voice Search</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 leading-relaxed">Your library actually learns from you. By connecting a free Google Gemini API key, the app analyzes your 👍 and 👎 ratings to generate dedicated <strong>Suggested Movies</strong> and <strong>Suggested Series</strong> rows.</p>
-                    <p class="text-gray-300">Skip typing on the remote entirely. Press the microphone and speak naturally: <em>"A thrilling 90s crime drama"</em> or <em>"A zombie movie with dark humor."</em> AI understands your intent and finds exact matches inside your own personal catalog.</p>
-                </div>
-                <div class="flex-1 relative group w-full">
-                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="AI_search.jpg" alt="AI Voice Search" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                <div class="flex-1 space-y-6">
-                    <h2 class="text-3xl md:text-5xl font-bold flex items-start">
-                        <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </span>
-                        <span>Android TV <br>Home Screen Channels</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 leading-relaxed">You don't even need to open the app to decide what to watch tonight. SmartStream integrates deeply with your television operating system.</p>
-                    <p class="text-gray-300">Publish custom native channels directly onto your main Android TV / Google TV home page. Add dedicated launcher rows for each of your profiles—such as <strong>Continue Watching</strong>, <strong>AI Suggested Movies</strong>, and <strong>AI Suggested Series</strong>.</p>
-                </div>
-                <div class="flex-1 relative group w-full">
-                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="home_screen_channels.png" alt="Android TV Home Channels Integration" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
-                <div class="flex-1 space-y-6">
-                    <h2 class="text-3xl md:text-5xl font-bold flex items-start">
-                        <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        </span>
-                        <span>Built for the <br>Whole Household</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 leading-relaxed">Keep everyone's viewing habits separate with up to <strong>5 isolated profiles</strong>. Every person gets their own individual watch history, custom AI recommendations, and personal watchlist.</p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Kids Profiles:</strong> Create safe spaces restricted strictly to approved folders.</li>
-                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>PIN Protection:</strong> Lock mature or sensitive category folders behind a PIN.</li>
-                    </ul>
-                </div>
-                <div class="flex-1 relative group w-full">
-                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="profiles.png" alt="Who is Watching Screen" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                <div class="flex-1 space-y-6">
-                    <h2 class="text-3xl md:text-5xl font-bold flex items-start">
-                        <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                        </span>
-                        <span>Whole-Home <br>Cloud Sync</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 leading-relaxed">Experience seamless transitions between rooms. Start a movie in the living room and pick up exactly where you left off in the bedroom.</p>
-                    <p class="text-gray-300">Connect your Google Drive to instantly sync preferences, ratings, watch history, and custom metadata to any new TV in your home. No more tedious setups.</p>
-                </div>
-                <div class="flex-1 relative group w-full">
-                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="cloud_sync.png" alt="Cloud Sync Setup" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-20 bg-darkbg border-y border-bordercol overflow-hidden">
-        <div class="text-center mb-12 px-6">
-            <h2 class="text-3xl md:text-4xl font-bold">Built for the Big Screen</h2>
-            <p class="text-gray-400 mt-3">Click any screenshot to view full size</p>
-        </div>
-        
-        <div class="relative w-full">
-            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-darkbg to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-darkbg to-transparent z-10 pointer-events-none"></div>
-            
-            <div class="marquee-track gap-6 px-3">
-                <div class="flex gap-6">
-                    <img onclick="openPopup(this.src)" src="streaming_dashboard.png" alt="Dashboard" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="profiles.png" alt="Profiles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="home_screen_channels.png" alt="Home Channels" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="playback_menu.png" alt="Playback" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="AI_search.jpg" alt="AI Voice Search" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="cloud_sync.png" alt="Cloud Sync" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="subtitle_preferences.png" alt="Subtitles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="tmdb_language_settings.png" alt="Language" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="library_update.png" alt="Library Update" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                </div>
-                <div class="flex gap-6">
-                    <img onclick="openPopup(this.src)" src="streaming_dashboard.png" alt="Dashboard" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="profiles.png" alt="Profiles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="home_screen_channels.png" alt="Home Channels" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="playback_menu.png" alt="Playback" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="AI_search.jpg" alt="AI Voice Search" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="cloud_sync.png" alt="Cloud Sync" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="subtitle_preferences.png" alt="Subtitles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="tmdb_language_settings.png" alt="Language" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                    <img onclick="openPopup(this.src)" src="library_update.png" alt="Library Update" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover cursor-pointer hover:border-brand transition">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
-                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Your Setup: Connect Up to 5 Providers</h3>
-                <p class="text-gray-400 mb-6">Aggregate your streaming libraries. Connect up to 5 Xtream Codes API accounts simultaneously into one interface and select exactly which movie and series folders to import.</p>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Fast QR pairing from your mobile phone</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Automatic background library scanning</li>
-                </ul>
-            </div>
-
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
-                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Zero Hassle: Frictionless Playback</h3>
-                <p class="text-gray-400 mb-6">Enjoy a buttery smooth 4K video player built natively for Android TV and Fire OS. Watch trailers before clicking play, and let the app alert you if a stream drops in quality.</p>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Switch audio and subtitles mid-stream</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Integrated OpenSubtitles automatic download</li>
-                </ul>
-            </div>
-
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
-                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Privacy & Security First</h3>
-                <p class="text-gray-400 mb-6">Your viewing habits are your business. Traffic uses HTTPS (TLS) and your configuration is encrypted at rest (AES-256). Optional phone-to-TV setup happens strictly over your local Wi-Fi.</p>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Private Google Drive personal storage</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Discreet Content Management (Secure XXX folders
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12
