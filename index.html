@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStream | AI-Powered TV Streaming Experience</title>
+    <title>SmartStream | AI-Powered Media Dashboard</title>
     <meta name="google-site-verification" content="OsYwuvQh9HbFlJ-wjhBIC32UWA3qnD6XdWteVU8zVk4" />
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: '#E50914',
+                        brand: '#E50914', /* Netflix/SmartStream Red */
                         darkbg: '#0a0a0a',
                         cardbg: '#141414',
                         bordercol: '#262626'
@@ -36,7 +36,7 @@
         }
         @keyframes scrollMarquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 12px)); }
+            100% { transform: translateX(calc(-50% - 12px)); } /* 12px accounts for half the gap */
         }
     </style>
 </head>
@@ -48,228 +48,133 @@
         
         <img src="smartstream_logo.png" alt="SmartStream Logo" class="relative z-10 mx-auto h-16 md:h-24 mb-8 object-contain">
         
-        <span class="relative z-10 text-xs md:text-sm uppercase tracking-widest text-brand font-semibold bg-brand/10 px-4 py-1.5 rounded-full border border-brand/20">
-            Available on Fire TV & Google TV
-        </span>
-
-        <h1 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mt-6 mb-6">
-            Your IPTV. Organized. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-red-600">Supercharged with AI.</span>
+        <h1 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+            Your Media. <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-red-600">Your Rules.</span>
         </h1>
         
-        <p class="relative z-10 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Turn your raw IPTV library into a true big-screen streaming experience. SmartStream organizes movies and series with rich covers, detailed overviews, and a home screen that feels like the major platforms—powered by an AI that actually learns your taste.
+        <p class="relative z-10 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Transform your IPTV subscription into a high-end, AI-powered streaming library. Connect securely via Xtream Codes to organize your movies and series into a beautiful, metadata-rich dashboard interface.
         </p>
         
         <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
             <a href="#download" class="bg-brand hover:bg-red-700 text-white font-bold text-lg py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(229,9,20,0.4)]">
                 Get SmartStream
             </a>
-            <a href="#ai-core" class="bg-cardbg hover:bg-bordercol border border-bordercol text-white font-bold text-lg py-4 px-8 rounded-full transition-all">
-                Explore AI Features
+            <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" class="bg-cardbg hover:bg-bordercol border border-bordercol text-white font-bold text-lg py-4 px-8 rounded-full transition-all">
+                Support & Feedback
             </a>
         </div>
 
-        <!-- Hero Screenshot -->
-        <div class="mt-20 relative max-w-5xl mx-auto group">
+        <div class="mt-20 relative max-w-5xl mx-auto group perspective-1000">
             <div class="absolute -inset-1 bg-gradient-to-b from-brand to-darkbg rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-            <img src="movie_browser.png" alt="SmartStream Home Screen" class="relative rounded-xl border border-bordercol shadow-2xl w-full">
+            <img src="movie_browser.png" alt="Dashboard Interface" class="relative rounded-xl border border-bordercol shadow-2xl w-full">
         </div>
     </header>
 
-
-    <!-- SECTION 1: THE AI CORE (Put first as requested) -->
-    <section id="ai-core" class="py-24 px-6 border-t border-bordercol bg-black relative">
-        <div class="max-w-7xl mx-auto space-y-24">
+    <!-- MAIN FEATURES (Alternating Layout) -->
+    <section class="py-24 px-6 border-t border-bordercol bg-black">
+        <div class="max-w-7xl mx-auto space-y-32">
             
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-xs uppercase tracking-widest text-brand font-bold mb-3">Artificial Intelligence</h2>
-                <h3 class="text-3xl md:text-5xl font-extrabold">Your Personal Streaming Heart</h3>
-            </div>
-
-            <!-- AI Feature 1: Taste Profile -->
+            <!-- 1. Dashboard & Library Management -->
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <div class="flex-1 space-y-6">
-                    <div class="inline-flex p-3 bg-brand/10 text-brand rounded-2xl">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                    <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
                     </div>
-                    <h4 class="text-3xl md:text-4xl font-bold">An AI That Knows Your Taste</h4>
-                    <p class="text-lg text-gray-400 leading-relaxed">
-                        Add your free Gemini AI key, and SmartStream begins learning what captivates you. Give movies and series a 👍 or 👎—the app builds a tailored profile and generates dedicated <strong>Suggested Movies</strong> and <strong>Suggested Series</strong> rows right on your home screen. The more you watch, the sharper it gets.
-                    </p>
+                    <h2 class="text-3xl md:text-5xl font-bold">Your Complete <br>Streaming Dashboard</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">Stop scrolling through endless, messy lists. Our engine automatically organizes your movies and series, pulling high-quality posters and descriptions while placing your most important content front and center.</p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Continue Watching:</strong> Resume movies and queue up next episodes instantly.</li>
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Personal Watchlists:</strong> Bookmark titles to 'My List' for quick access later.</li>
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Smart Filters:</strong> Sort your movies and series seamlessly by genre, year, and rating.</li>
+                    </ul>
                 </div>
                 <div class="flex-1 relative group w-full">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img src="gemini_ai_engine.png" alt="Suggested Movies Row" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
+                    <img src="movie_details.png" alt="Movie Details" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
                 </div>
             </div>
 
-            <!-- AI Feature 2: Voice Search -->
+            <!-- 2. AI Discovery & Voice Search -->
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                 <div class="flex-1 space-y-6">
-                    <div class="inline-flex p-3 bg-brand/10 text-brand rounded-2xl">
+                    <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                     </div>
-                    <h4 class="text-3xl md:text-4xl font-bold">Just Say It: Natural Voice Search</h4>
-                    <p class="text-lg text-gray-400 leading-relaxed">
-                        Ditch typing on a clunky TV remote. Hit the microphone and say: <em>"A thrilling 90s crime drama"</em> or <em>"A zombie movie with dark humor."</em> The AI understands your mood, context, and native language, hunting down exact matches hidden inside <strong>your own library</strong>.
-                    </p>
+                    <h2 class="text-3xl md:text-5xl font-bold">Just Say It: <br>Natural Voice Search</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">Your library actually learns from you. By connecting a free Google Gemini API key, the app analyzes your 👍 and 👎 ratings to generate dedicated <strong>Suggested Movies</strong> and <strong>Suggested Series</strong> rows.</p>
+                    <p class="text-gray-300">Skip typing on the remote entirely. Press the microphone and speak naturally: <em>"A thrilling 90s crime drama"</em> or <em>"A zombie movie with dark humor."</em> AI understands your intent and finds exact matches inside your own personal catalog.</p>
                 </div>
                 <div class="flex-1 relative group w-full">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <!-- Placeholder for Voice Search Screenshot -->
-                    <img src="movie_details.png" alt="AI Voice Search Results" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
+                    <img src="gemini_ai_engine.png" alt="AI Recommendations" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
                 </div>
             </div>
 
-            <!-- AI Feature 3: Obscure Metadata Fallback & Disclaimer Box -->
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 md:p-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h4 class="text-2xl font-bold mb-3">Matching What TMDB Misses</h4>
-                        <p class="text-gray-400 leading-relaxed mb-6">
-                            IPTV playlists can be messy. When standard databases fail to recognize a weirdly named file, our AI analyzes the title string to identify the show, generating clean posters and plot summaries for even the most obscure media.
-                        </p>
-                        <span class="text-xs text-gray-500 italic">*AI identifications are intelligent estimates and can occasionally vary.</span>
+            <!-- 3. Android TV Launcher Channels -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-6">
+                    <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </div>
-                    <div class="bg-darkbg p-6 rounded-xl border border-brand/30">
-                        <div class="flex items-center gap-3 mb-2 text-brand font-bold">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                            Good to know: Bring Your Own Key
-                        </div>
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            SmartStream’s AI operates 100% privately. You supply your own free Google Gemini API key. Pair it in seconds via QR code—your key communicates directly from your TV to Google over your local network. No extra subscription fees.
-                        </p>
+                    <h2 class="text-3xl md:text-5xl font-bold">Android TV <br>Home Screen Channels</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">You don't even need to open the app to decide what to watch tonight. SmartStream integrates deeply with your television operating system.</p>
+                    <p class="text-gray-300">Publish custom native channels directly onto your main Android TV / Google TV home page. Add dedicated launcher rows for each of your profiles—such as <strong>Continue Watching</strong>, <strong>AI Suggested Movies</strong>, and <strong>AI Suggested Series</strong>.</p>
+                </div>
+                <div class="flex-1 relative group w-full">
+                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img src="movie_browser.png" alt="Android TV Home Channels Integration" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
+                </div>
+            </div>
+
+            <!-- 4. Built for the Whole Household -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-6">
+                    <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     </div>
+                    <h2 class="text-3xl md:text-5xl font-bold">Built for the <br>Whole Household</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">Keep everyone's viewing habits separate with up to <strong>5 isolated profiles</strong>. Every person gets their own individual watch history, custom AI recommendations, and personal watchlist.</p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Kids Profiles:</strong> Create safe spaces restricted strictly to approved folders.</li>
+                        <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>PIN Protection:</strong> Lock mature or sensitive category folders behind a PIN.</li>
+                    </ul>
+                </div>
+                <div class="flex-1 relative group w-full">
+                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img src="playback_menu.png" alt="Household Profiles" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
+                </div>
+            </div>
+
+            <!-- 5. Whole-Home Cloud Sync -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-6">
+                    <div class="inline-flex items-center justify-center p-3 bg-brand/10 text-brand rounded-2xl mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold">Whole-Home <br>Cloud Sync</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">Experience seamless transitions between rooms. Start a movie in the living room and pick up exactly where you left off in the bedroom.</p>
+                    <p class="text-gray-300">Connect your Google Drive to instantly sync preferences, ratings, watch history, and custom metadata to any new TV in your home. No more tedious setups.</p>
+                </div>
+                <div class="flex-1 relative group w-full">
+                    <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img src="cloud_sync.png" alt="Cloud Sync Setup" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover">
                 </div>
             </div>
 
         </div>
     </section>
 
-
-    <!-- SECTION 2: THE DASHBOARD & BROWSING -->
-    <section class="py-24 px-6 bg-darkbg border-t border-bordercol">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-5xl font-bold">Your Dashboard. Everything in One Place.</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-cardbg p-8 rounded-2xl border border-bordercol">
-                    <div class="text-brand text-2xl font-black mb-3">01</div>
-                    <h4 class="text-xl font-bold mb-2">Continue Watching</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Remembering the exact timestamp of your movies and queuing up the next episode of your series automatically. Turn on the TV and resume in seconds.</p>
-                </div>
-
-                <div class="bg-cardbg p-8 rounded-2xl border border-bordercol">
-                    <div class="text-brand text-2xl font-black mb-3">02</div>
-                    <h4 class="text-xl font-bold mb-2">Personal Watchlist</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Found an intriguing title while browsing? Bookmark it instantly to <strong>My List</strong> to build your dedicated big-screen queue.</p>
-                </div>
-
-                <div class="bg-cardbg p-8 rounded-2xl border border-bordercol">
-                    <div class="text-brand text-2xl font-black mb-3">03</div>
-                    <h4 class="text-xl font-bold mb-2">Deep Filtering</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Slice through massive IPTV catalogs seamlessly. Filter by genre, audio language, release year, or use voice search when you only know the vibe.</p>
-                </div>
-            </div>
-
-            <!-- Browse Screenshot -->
-            <div class="relative max-w-5xl mx-auto">
-                <img src="movie_details.png" alt="Library Browsing Interface" class="rounded-xl border border-bordercol shadow-2xl w-full">
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- SECTION 3: BUILT FOR THE WHOLE FAMILY -->
-    <section class="py-24 px-6 bg-black border-t border-bordercol">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div class="space-y-8">
-                <h2 class="text-3xl md:text-5xl font-bold">Built for the <br>Whole Household</h2>
-                
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-brand/10 border border-brand/20 flex items-center justify-center text-brand font-bold shrink-0">5</div>
-                        <div>
-                            <h5 class="text-xl font-bold mb-1">Up to 5 Isolated Profiles</h5>
-                            <p class="text-gray-400">Every family member gets their own watch history, tailored AI recommendations, and independent watchlist. Kids can be assigned a dedicated <strong>Kids Profile</strong> restricted only to safe folders.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-brand/10 border border-brand/20 flex items-center justify-center text-brand font-bold shrink-0">🔒</div>
-                        <div>
-                            <h5 class="text-xl font-bold mb-1">Granular Parental Controls</h5>
-                            <p class="text-gray-400">Lock adult content behind a secure PIN code, and dictate precisely which IPTV category folders each individual profile is allowed to browse.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition"></div>
-                <!-- Placeholder for Profiles Screenshot -->
-                <img src="movie_browser.png" alt="Who is Watching Screen" class="relative rounded-xl border border-bordercol shadow-2xl w-full">
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- SECTION 4: SETUP & PLAYBACK -->
-    <section class="py-24 px-6 bg-darkbg border-t border-bordercol">
-        <div class="max-w-7xl mx-auto space-y-24">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-cardbg p-8 md:p-12 rounded-2xl border border-bordercol flex flex-col justify-between">
-                    <div>
-                        <span class="text-brand font-semibold text-sm uppercase tracking-wider">Your Setup</span>
-                        <h3 class="text-3xl font-bold mt-2 mb-4">Connect Up to 5 IPTV Providers</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">Support for standard Xtream Codes API. Select exactly which VOD folders to import. Hate typing credentials with directional arrows? Scan a QR code with your phone to inject logins, AI keys, or OpenSubtitles accounts instantly.</p>
-                    </div>
-                    <!-- Placeholder for QR pairing image -->
-                    <img src="library_update.png" alt="QR Pairing Screen" class="rounded-lg border border-bordercol mt-4">
-                </div>
-
-                <div class="bg-cardbg p-8 md:p-12 rounded-2xl border border-bordercol flex flex-col justify-between">
-                    <div>
-                        <span class="text-brand font-semibold text-sm uppercase tracking-wider">Zero Hassle</span>
-                        <h3 class="text-3xl font-bold mt-2 mb-4">Frictionless Playback Engine</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">Watch trailers before diving in. Switch audio tracks and subtitles mid-stream. Missing native subtitles? The engine fetches them directly via OpenSubtitles. Automatically selects the optimal stream and alerts you if a provider's source quality drops.</p>
-                    </div>
-                    <img src="playback_menu.png" alt="Player Overlay" class="rounded-lg border border-bordercol mt-4">
-                </div>
-            </div>
-
-            <!-- Cloud Sync Highlight -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-r from-cardbg to-black p-8 md:p-12 rounded-2xl border border-bordercol">
-                <div class="max-w-2xl">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-3">Same Setup on Every TV: Cloud Sync</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Back up your settings, ratings, watch history, and library mapping directly to your personal <strong>Google Drive</strong>. Buy a new TV? Restore your entire household setup in under two minutes. When one TV refreshes library metadata, the rest sync automatically.
-                    </p>
-                </div>
-                <img src="cloud_sync.png" alt="Cloud Sync Status" class="w-full md:w-64 rounded-lg border border-bordercol shadow-md shrink-0">
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- SECTION 5: GALLERY MARQUEE -->
-    <section class="py-20 bg-black border-t border-bordercol overflow-hidden">
+    <!-- GALLERY MARQUEE -->
+    <section class="py-20 bg-darkbg border-y border-bordercol overflow-hidden">
         <div class="text-center mb-12 px-6">
-            <h2 class="text-3xl md:text-4xl font-bold">Designed for the Big Screen</h2>
-            <p class="text-gray-500 mt-2">Hover over the gallery to pause</p>
+            <h2 class="text-3xl md:text-4xl font-bold">Built for the Big Screen</h2>
+            <p class="text-gray-400 mt-3">Hover over the gallery to pause</p>
         </div>
         
         <div class="relative w-full">
-            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-darkbg to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-darkbg to-transparent z-10 pointer-events-none"></div>
             
             <div class="marquee-track gap-6 px-3">
                 <div class="flex gap-6">
@@ -280,6 +185,7 @@
                     <img src="cloud_sync.png" alt="Cloud Sync" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="subtitle_preferences.png" alt="Subtitles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="tmdb_language_settings.png" alt="Language" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
+                    <img src="library_update.png" alt="Library Update" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                 </div>
                 <div class="flex gap-6">
                     <img src="movie_browser.png" alt="Dashboard" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
@@ -289,62 +195,76 @@
                     <img src="cloud_sync.png" alt="Cloud Sync" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="subtitle_preferences.png" alt="Subtitles" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                     <img src="tmdb_language_settings.png" alt="Language" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
+                    <img src="library_update.png" alt="Library Update" class="h-48 md:h-64 rounded-lg border border-bordercol shadow-lg object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- SECTION 6: SUMMARY TABLE (New request) -->
-    <section class="py-24 px-6 bg-darkbg border-t border-bordercol">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose SmartStream?</h2>
+    <!-- TECHNICAL & SETUP HIGHLIGHTS (2x2 Grid) -->
+    <section class="py-24 px-6 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="overflow-x-auto border border-bordercol rounded-2xl bg-cardbg">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="border-b border-bordercol bg-black/50 text-gray-400 text-sm">
-                            <th class="py-4 px-6 font-semibold w-1/3">Feature</th>
-                            <th class="py-4 px-6 font-semibold">What You Get</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-bordercol text-sm md:text-base">
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> AI Recommendations</td>
-                            <td class="py-4 px-6 text-gray-300">Tailored movie & series rows generated strictly from your taste profile.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> AI Voice Search</td>
-                            <td class="py-4 px-6 text-gray-300">Find content by speaking your exact mood, genre blend, or vague plotlines.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> Smart Metadata</td>
-                            <td class="py-4 px-6 text-gray-300">Clean TMDB covers and plot descriptions—even for poorly formatted IPTV files.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> Family Profiles</td>
-                            <td class="py-4 px-6 text-gray-300">Up to 5 accounts featuring safe Kids Profiles and PIN-locked adult categories.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> Cloud Sync</td>
-                            <td class="py-4 px-6 text-gray-300">Synchronize your exact layout, watch progress, and ratings across all home TVs.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2"><span class="text-brand">✦</span> Multi-IPTV Ready</td>
-                            <td class="py-4 px-6 text-gray-300">Connect up to 5 Xtream Codes API providers simultaneously into one interface.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Card 1: Setup -->
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Your Setup: Connect Up to 5 Providers</h3>
+                <p class="text-gray-400 mb-6">Aggregate your streaming libraries. Connect up to 5 Xtream Codes API accounts simultaneously into one interface and select exactly which movie and series folders to import.</p>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Fast QR pairing from your mobile phone</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Automatic background library scanning</li>
+                </ul>
             </div>
+
+            <!-- Card 2: Playback -->
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Zero Hassle: Frictionless Playback</h3>
+                <p class="text-gray-400 mb-6">Enjoy a buttery smooth 4K video player built natively for Android TV and Fire OS. Watch trailers before clicking play, and let the app alert you if a stream drops in quality.</p>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Switch audio and subtitles mid-stream</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Integrated OpenSubtitles automatic download</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Privacy -->
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Privacy & Security First</h3>
+                <p class="text-gray-400 mb-6">Your viewing habits are your business. Traffic uses HTTPS (TLS) and your configuration is encrypted at rest (AES-256). Optional phone-to-TV setup happens strictly over your local Wi-Fi.</p>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Private Google Drive personal storage</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Discreet Content Management (Secure XXX folders)</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Technical -->
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Technical Highlights</h3>
+                <p class="text-gray-400 mb-6">Engineered for data portability and rock-solid platform compatibility without relying on expensive middleman servers.</p>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Full Xtream Codes API VOD Support</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand"></div> Local network key transfer (Phone → TV on LAN)</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
-
     <!-- DOWNLOAD SECTION -->
-    <section id="download" class="py-24 px-6 bg-black border-t border-bordercol text-center">
+    <section id="download" class="py-24 px-6 bg-darkbg border-t border-bordercol text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Start Streaming Smarter</h2>
-            <p class="text-xl text-gray-400 mb-12">Scan the QR codes below with your smartphone camera to install directly on your TV.</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Get SmartStream Today</h2>
+            <p class="text-xl text-gray-400 mb-12">Scan the QR codes below to download directly to your television.</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-8">
                 <div class="bg-cardbg border border-bordercol p-8 rounded-2xl w-full max-w-sm hover:-translate-y-2 transition duration-300">
@@ -352,7 +272,7 @@
                         <img src="google_play_qr.png" alt="Google Play QR Code" class="w-full h-full object-contain">
                     </div>
                     <h4 class="text-2xl font-bold text-white mb-2">Google Play Store</h4>
-                    <p class="text-gray-400 text-sm">For Android TV, Google TV & NVIDIA Shield</p>
+                    <p class="text-gray-400">For Android TV & Google TV</p>
                 </div>
 
                 <div class="bg-cardbg border border-bordercol p-8 rounded-2xl w-full max-w-sm hover:-translate-y-2 transition duration-300">
@@ -360,23 +280,23 @@
                         <img src="amazon_store_qr.png" alt="Amazon Appstore QR Code" class="w-full h-full object-contain">
                     </div>
                     <h4 class="text-2xl font-bold text-white mb-2">Amazon Appstore</h4>
-                    <p class="text-gray-400 text-sm">For Fire TV Stick, Cube & Fire OS</p>
+                    <p class="text-gray-400">For Fire TV Stick & Fire OS</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-darkbg py-12 px-6 border-t border-bordercol text-center">
-        <div class="max-w-3xl mx-auto space-y-6">
-            <p class="text-gray-500 text-xs md:text-sm border border-bordercol p-4 rounded-xl inline-block text-left leading-relaxed">
-                <strong>Legal Disclaimer:</strong> SmartStream is a media player dashboard. It does not provide, host, or distribute any video content or playlists. Users must provide their own legally acquired IPTV service credentials (Xtream API).
+    <footer class="bg-black py-12 px-6 border-t border-bordercol text-center">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-gray-500 text-sm mb-6 border border-bordercol p-4 rounded-lg inline-block max-w-xl">
+                <strong>Disclaimer:</strong> This app does not provide content. Users must provide their own IPTV service credentials and API keys. Optional setup may transfer your API key from your phone to your TV only over your local network.
             </p>
-            <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="privacy-policy.html" class="text-gray-400 hover:text-brand transition font-medium">Privacy Policy</a>
-                <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" class="text-gray-400 hover:text-brand transition font-medium">Report a Bug / Feedback</a>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="privacy-policy.html" class="text-gray-400 hover:text-brand transition font-medium">Privacy Policy & Terms of Use</a>
+                <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" class="text-gray-400 hover:text-brand transition font-medium">Report an Issue</a>
             </div>
-            <p class="text-gray-600 text-xs">&copy; 2026 SmartStream App. All rights reserved.</p>
+            <p class="text-gray-600 text-sm">&copy; 2026 SmartStream. All rights reserved.</p>
         </div>
     </footer>
 
