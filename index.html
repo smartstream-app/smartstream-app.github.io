@@ -6,6 +6,7 @@
     <title>SmartStream | AI-Powered Media Dashboard</title>
     <meta name="google-site-verification" content="OsYwuvQh9HbFlJ-wjhBIC32UWA3qnD6XdWteVU8zVk4" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -42,7 +43,7 @@
 </head>
 <body class="bg-darkbg text-white font-sans antialiased overflow-x-hidden selection:bg-brand selection:text-white relative">
 
-    <header class="relative pt-20 pb-16 px-6 lg:pt-32 lg:pb-24 max-w-7xl mx-auto text-center">
+    <header class="relative pt-20 pb-16 px-6 lg:pt-32 lg:pb-24 max-w-7xl mx-auto text-center" data-aos="fade-down" data-aos-duration="1000">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand/20 blur-[120px] rounded-full pointer-events-none"></div>
         
         <img src="smartstream_logo.png" alt="SmartStream Logo" class="relative z-10 mx-auto h-16 md:h-24 mb-8 object-contain">
@@ -64,7 +65,7 @@
             </a>
         </div>
 
-        <div class="mt-20 relative max-w-5xl mx-auto group perspective-1000">
+        <div class="mt-20 relative max-w-5xl mx-auto group perspective-1000" data-aos="zoom-in" data-aos-delay="300">
             <div class="absolute -inset-1 bg-gradient-to-b from-brand to-darkbg rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
             <img onclick="openPopup(this.src)" src="movie_browser.png" alt="Dashboard Interface" class="relative rounded-xl border border-bordercol shadow-2xl w-full cursor-pointer hover:opacity-90 transition">
         </div>
@@ -73,7 +74,7 @@
     <section class="py-24 px-6 border-t border-bordercol bg-black">
         <div class="max-w-7xl mx-auto space-y-32">
             
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20" data-aos="fade-right">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold flex items-start">
                         <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
@@ -88,13 +89,13 @@
                         <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>Personal Watchlists:</strong> Bookmark titles to 'My List' for quick access later.</li>
                     </ul>
                 </div>
-                <div class="flex-1 relative group w-full">
+                <div class="flex-1 relative group w-full" data-aos="fade-left">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img onclick="openPopup(this.src)" src="streaming_dashboard.png" alt="SmartStream Dashboard" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20" data-aos="fade-left">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold flex items-start">
                         <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
@@ -105,13 +106,13 @@
                     <p class="text-xl text-gray-400 leading-relaxed">Your library actually learns from you. By connecting a free Google Gemini API key, the app analyzes your 👍 and 👎 ratings to generate dedicated <strong>Suggested Movies</strong> and <strong>Suggested Series</strong> rows.</p>
                     <p class="text-gray-300">Skip typing on the remote entirely. Press the microphone and speak naturally: <em>"A thrilling 90s crime drama"</em> or <em>"A zombie movie with dark humor."</em> AI understands your intent and finds exact matches inside your own personal catalog.</p>
                 </div>
-                <div class="flex-1 relative group w-full">
+                <div class="flex-1 relative group w-full" data-aos="fade-right">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img onclick="openPopup(this.src)" src="AI_search.jpg" alt="AI Voice Search" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20" data-aos="fade-right">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold flex items-start">
                         <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
@@ -122,13 +123,13 @@
                     <p class="text-xl text-gray-400 leading-relaxed">You don't even need to open the app to decide what to watch tonight. SmartStream integrates deeply with your television operating system.</p>
                     <p class="text-gray-300">Publish custom native channels directly onto your main Android TV / Google TV home page. Add dedicated launcher rows for each of your profiles—such as <strong>Continue Watching</strong>, <strong>AI Suggested Movies</strong>, and <strong>AI Suggested Series</strong>.</p>
                 </div>
-                <div class="flex-1 relative group w-full">
+                <div class="flex-1 relative group w-full" data-aos="fade-left">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img onclick="openPopup(this.src)" src="home_screen_channels.png" alt="Android TV Home Channels Integration" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20" data-aos="fade-left">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold flex items-start">
                         <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
@@ -142,13 +143,13 @@
                         <li class="flex items-center gap-3"><span class="text-brand">✓</span> <strong>PIN Protection:</strong> Lock mature or sensitive category folders behind a PIN.</li>
                     </ul>
                 </div>
-                <div class="flex-1 relative group w-full">
+                <div class="flex-1 relative group w-full" data-aos="fade-right">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img onclick="openPopup(this.src)" src="profiles.png" alt="Who is Watching Screen" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20" data-aos="fade-right">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold flex items-start">
                         <span class="inline-flex items-center justify-center p-2.5 bg-brand/10 text-brand rounded-xl mr-4 shrink-0 mt-1">
@@ -159,7 +160,7 @@
                     <p class="text-xl text-gray-400 leading-relaxed">Experience seamless transitions between rooms. Start a movie in the living room and pick up exactly where you left off in the bedroom.</p>
                     <p class="text-gray-300">Connect your Google Drive to instantly sync preferences, ratings, watch history, and custom metadata to any new TV in your home. No more tedious setups.</p>
                 </div>
-                <div class="flex-1 relative group w-full">
+                <div class="flex-1 relative group w-full" data-aos="fade-left">
                     <div class="absolute -inset-1 bg-brand rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img onclick="openPopup(this.src)" src="cloud_sync.png" alt="Cloud Sync Setup" class="relative rounded-xl border border-bordercol shadow-2xl w-full object-cover cursor-pointer hover:opacity-90 transition">
                 </div>
@@ -168,7 +169,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-darkbg border-y border-bordercol overflow-hidden">
+    <section class="py-20 bg-darkbg border-y border-bordercol overflow-hidden" data-aos="fade-up">
         <div class="text-center mb-12 px-6">
             <h2 class="text-3xl md:text-4xl font-bold">Built for the Big Screen</h2>
             <p class="text-gray-400 mt-3">Click any screenshot to view full size</p>
@@ -208,7 +209,7 @@
     <section class="py-24 px-6 bg-black">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition" data-aos="fade-up">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
@@ -220,7 +221,7 @@
                 </ul>
             </div>
 
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
@@ -232,7 +233,7 @@
                 </ul>
             </div>
 
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition" data-aos="fade-up">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
                 </div>
@@ -244,7 +245,7 @@
                 </ul>
             </div>
 
-            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition">
+            <div class="bg-cardbg border border-bordercol rounded-2xl p-8 lg:p-12 hover:border-gray-600 transition" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mb-6 text-brand">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                 </div>
@@ -259,7 +260,7 @@
         </div>
     </section>
 
-    <section id="download" class="py-24 px-6 bg-darkbg border-t border-bordercol text-center">
+    <section id="download" class="py-24 px-6 bg-darkbg border-t border-bordercol text-center" data-aos="fade-up">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Get SmartStream Today</h2>
             <p class="text-xl text-gray-400 mb-12">Scan the QR codes below to download directly to your television.</p>
@@ -298,27 +299,88 @@
     </footer>
 
 
-    <div id="imagePopupModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md">
+    <div id="imagePopupModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl select-none">
         <div class="flex items-center justify-center min-h-screen p-4" onclick="closePopup()">
             
-            <button onclick="closePopup()" class="absolute top-6 right-6 z-50 text-gray-400 hover:text-white bg-cardbg/80 border border-bordercol p-3 rounded-full transition">
+            <button onclick="closePopup()" class="absolute top-6 right-6 z-50 text-gray-400 hover:text-white bg-cardbg/80 hover:bg-brand border border-bordercol p-3 rounded-full transition duration-300 shadow-lg">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
 
-            <div onclick="event.stopPropagation()" class="relative bg-cardbg border border-bordercol rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center w-[90vw] max-w-[800px] aspect-video">
-                <img id="popupImgTarget" src="" alt="Enlarged screenshot" class="w-full h-full object-contain">
+            <div id="galleryCounter" class="absolute top-8 left-8 z-50 text-sm font-semibold tracking-widest text-gray-400 bg-cardbg/80 border border-bordercol px-4 py-2 rounded-full">
             </div>
+
+            <button onclick="changeImage(-1, event)" class="absolute left-4 md:left-10 z-50 p-4 text-gray-400 hover:text-white bg-cardbg/60 hover:bg-brand/80 border border-bordercol rounded-full transition transform hover:scale-110 active:scale-95">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+
+            <div onclick="event.stopPropagation()" class="relative bg-transparent rounded-2xl overflow-hidden flex items-center justify-center w-[85vw] max-w-[1100px] h-[80vh]">
+                <img id="popupImgTarget" src="" alt="Enlarged screenshot" class="max-w-full max-h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-all duration-300">
+            </div>
+
+            <button onclick="changeImage(1, event)" class="absolute right-4 md:right-10 z-50 p-4 text-gray-400 hover:text-white bg-cardbg/60 hover:bg-brand/80 border border-bordercol rounded-full transition transform hover:scale-110 active:scale-95">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
 
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            offset: 50
+        });
+    </script>
+
+    <script>
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        function initGallery() {
+            const imgs = document.querySelectorAll('img[onclick*="openPopup"]');
+            const uniqueSrcs = new Set();
+            imgs.forEach(img => uniqueSrcs.add(img.getAttribute('src')));
+            galleryImages = Array.from(uniqueSrcs);
+        }
+
+        function updateCounter() {
+            const counterEl = document.getElementById('galleryCounter');
+            counterEl.innerText = `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
         function openPopup(imageSource) {
+            if (galleryImages.length === 0) initGallery();
+            
+            currentIndex = galleryImages.indexOf(imageSource);
+            if (currentIndex === -1) currentIndex = 0;
+
             const modal = document.getElementById('imagePopupModal');
             const targetImg = document.getElementById('popupImgTarget');
+            
             targetImg.src = imageSource;
+            updateCounter();
+            
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden'; 
+        }
+
+        function changeImage(direction, event) {
+            if (event) event.stopPropagation();
+            
+            currentIndex += direction;
+            
+            if (currentIndex >= galleryImages.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+
+            const targetImg = document.getElementById('popupImgTarget');
+            
+            targetImg.style.opacity = '0.4';
+            setTimeout(() => {
+                targetImg.src = galleryImages[currentIndex];
+                targetImg.style.opacity = '1';
+                updateCounter();
+            }, 120);
         }
 
         function closePopup() {
@@ -329,10 +391,15 @@
         }
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closePopup();
+            const modal = document.getElementById('imagePopupModal');
+            if (modal.style.display === 'block') {
+                if (event.key === "Escape") closePopup();
+                if (event.key === "ArrowLeft") changeImage(-1);
+                if (event.key === "ArrowRight") changeImage(1);
             }
         });
+
+        document.addEventListener('DOMContentLoaded', initGallery);
     </script>
 
 </body>
