@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — SmartStream</title>
+  <link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-title-key="m.st.title">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html"><img src="../images/brand/smartstream-logo.png" alt="SmartStream"></a>
+      <nav class="site-nav">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="index.html" class="active" data-i18n="nav.manual">User Manual</a>
+        <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="m.st.h1">5. Settings</h1>
+    <p class="lead" data-i18n="m.st.lead">Open Settings from the left menu. There are four main screens. Names below match the buttons in the app.</p>
+
+    <figure class="figure">
+      <img src="../images/screenshots/08-settings-menu.png" data-i18n-alt="m.st.menuAlt" alt="Settings" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 08-settings-menu.png</div>'">
+      <figcaption data-i18n="m.st.menuCap">Settings hub: Accounts &amp; Connections, Playback &amp; Live TV, UI &amp; Languages, Profile &amp; System.</figcaption>
+    </figure>
+
+    <table class="data">
+      <tr>
+        <th data-i18n="m.st.thMenu">Menu</th>
+        <th data-i18n="m.st.thWhat">What it contains</th>
+      </tr>
+      <tr>
+        <td data-i18n="m.st.hub1">Accounts &amp; Connections</td>
+        <td data-i18n="m.st.hub1d">IPTV providers, Gemini AI, Google Drive</td>
+      </tr>
+      <tr>
+        <td data-i18n="m.st.hub2">Playback &amp; Live TV</td>
+        <td data-i18n="m.st.hub2d">Player, network, Live TV &amp; EPG, audio</td>
+      </tr>
+      <tr>
+        <td data-i18n="m.st.hub3">UI &amp; Languages</td>
+        <td data-i18n="m.st.hub3d">Subtitles, on-screen controls, app and metadata language</td>
+      </tr>
+      <tr>
+        <td data-i18n="m.st.hub4">Profile &amp; System</td>
+        <td data-i18n="m.st.hub4d">Parental PIN, ratings, diagnostics</td>
+      </tr>
+    </table>
+
+    <div class="settings-map">
+      <h2 data-i18n="m.st.accountH">Accounts &amp; Connections</h2>
+      <figure class="figure">
+        <img src="../images/screenshots/09-settings-account.png" data-i18n-alt="m.st.accountAlt" alt="Accounts &amp; Connections" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 09-settings-account.png</div>'">
+      </figure>
+      <ul>
+        <li data-i18n-html="m.st.account1"><strong>IPTV Providers</strong> — add up to 5 Xtream accounts (QR from phone or type on TV). Per provider: Test, Save, Select Movies and Series, Select TV Channels, max connections, and enable/disable playback for this profile.</li>
+        <li data-i18n-html="m.st.accountXmltv"><strong>+ Manage XMLTV</strong> (on the provider screen) — EPG source status, refresh all guides now, and up to 3 custom XMLTV lists shared by the whole household.</li>
+        <li data-i18n-html="m.st.account2"><strong>Gemini AI</strong> — API key for suggestions and natural-language search (primary profile). Can be skipped.</li>
+        <li data-i18n-html="m.st.account3"><strong>Google Drive</strong> — Cloud Sync backup between TVs (primary profile).</li>
+      </ul>
+      <figure class="figure">
+        <img src="../images/screenshots/15-ai-gemini-settings.png" data-i18n-alt="m.st.geminiAlt" alt="Gemini AI" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 15-ai-gemini-settings.png</div>'">
+      </figure>
+      <figure class="figure">
+        <img src="../images/screenshots/33-custom-epg-xmltv.png" data-i18n-alt="m.st.xmltvAlt" alt="Custom EPG lists" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 33-custom-epg-xmltv.png</div>'">
+        <figcaption data-i18n="m.st.xmltvCap">Manage XMLTV — provider EPG status and custom XMLTV lists.</figcaption>
+      </figure>
+
+      <h2 data-i18n="m.st.playerH">Playback &amp; Live TV</h2>
+
+      <h3 data-i18n="m.st.pnH">Player &amp; Network</h3>
+      <figure class="figure">
+        <img src="../images/screenshots/29-settings-playback-livetv.png" data-i18n-alt="m.st.playerAlt" alt="Player &amp; Network" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 29-settings-playback-livetv.png</div>'">
+      </figure>
+      <ul>
+        <li data-i18n-html="m.st.pn1"><strong>Network Buffer Size</strong> — Small through Extra Large. Larger is more stable on slow networks; smaller starts faster.</li>
+        <li data-i18n-html="m.st.pn2"><strong>Auto-switch poor encodes</strong> — hides 4K H.264 film streams in Details (they often judder). Dolby Vision and HEVC/H.265 are not affected. Also auto-switches 30 fps telecine encodes.</li>
+        <li data-i18n-html="m.st.pn3"><strong>Intelligent Switching</strong> — automatically try another stream when playback fails.</li>
+        <li data-i18n-html="m.st.pn4"><strong>Preferred stream quality</strong> — puts your chosen quality first in the long-press Play list (for example 4K UHD).</li>
+      </ul>
+
+      <h3 data-i18n="m.st.liveH">Live TV &amp; EPG</h3>
+      <figure class="figure">
+        <img src="../images/screenshots/30-settings-live-tv-epg.png" data-i18n-alt="m.st.liveAlt" alt="Live TV &amp; EPG" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 30-settings-live-tv-epg.png</div>'">
+      </figure>
+      <ul>
+        <li data-i18n-html="m.st.live1"><strong>Autoplay last channel</strong> — when you start the app, open Live TV on the last watched channel.</li>
+        <li data-i18n-html="m.st.live2"><strong>Program reminder</strong> — how many minutes before a programme start to notify you.</li>
+      </ul>
+      <h4 data-i18n="m.st.liveFavH">Favorites</h4>
+      <p data-i18n="m.st.live3">Opens extra Live TV options:</p>
+      <ul>
+        <li data-i18n-html="m.st.live3a"><strong>EPG sidebar</strong> — All TV folders, Favorite Channels, or Favorite Channels &amp; PPV.</li>
+        <li data-i18n-html="m.st.live3b"><strong>Auto clean channel names in favorites</strong> — strip prefixes/suffixes from favorite names.</li>
+        <li data-i18n-html="m.st.live3c"><strong>Link stream to favorites</strong> — find backup streams on other providers for favorite channels.</li>
+        <li data-i18n-html="m.st.live3d"><strong>Scan favorites</strong> — Missing or All: detect video/audio quality for favorites that have several streams.</li>
+      </ul>
+
+      <h3 data-i18n="m.st.audioH">Audio</h3>
+      <ul>
+        <li data-i18n-html="m.st.audio1"><strong>Preferred language</strong> — first audio track when available.</li>
+        <li data-i18n-html="m.st.audio2"><strong>Fallback language</strong> — used if the preferred track is missing.</li>
+        <li data-i18n-html="m.st.audio3"><strong>HDMI Passthrough (Bitstream)</strong> — send Dolby/DTS unchanged to your sound system.</li>
+      </ul>
+
+      <h2 data-i18n="m.st.langH">UI &amp; Languages</h2>
+      <figure class="figure">
+        <img src="../images/screenshots/31-settings-ui-languages.png" data-i18n-alt="m.st.langAlt" alt="UI &amp; Languages" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 31-settings-ui-languages.png</div>'">
+      </figure>
+
+      <h3 data-i18n="m.st.subH">Subtitles</h3>
+      <ul>
+        <li data-i18n-html="m.st.sub1"><strong>Configure OpenSubtitles</strong> — optional account for online subtitles.</li>
+        <li data-i18n-html="m.st.sub2"><strong>Preferred subtitle language</strong> — default language, fallback language, and Prioritize SDH subtitles (for hearing-impaired viewers).</li>
+        <li data-i18n-html="m.st.sub3"><strong>Subtitle Appearance</strong> — font, size, colour, and position on screen.</li>
+      </ul>
+      <figure class="figure">
+        <img src="../images/screenshots/20-subtitle-settings.png" data-i18n-alt="m.st.subAppAlt" alt="Subtitle appearance" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 20-subtitle-settings.png</div>'">
+      </figure>
+      <figure class="figure">
+        <img src="../images/screenshots/21-opensubtitles.png" data-i18n-alt="m.st.osAlt" alt="OpenSubtitles" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 21-opensubtitles.png</div>'">
+      </figure>
+
+      <h3 data-i18n="m.st.osdH">Interface &amp; OSD</h3>
+      <ul>
+        <li data-i18n-html="m.st.osd1"><strong>Playback bar auto-hide delay</strong> — how long the control bar stays visible (or Off).</li>
+        <li data-i18n-html="m.st.osd2"><strong>Show Grid Overlay</strong> — on-screen grid while browsing.</li>
+        <li data-i18n-html="m.st.osd3"><strong>AI voice search</strong> — show the microphone in search for natural-language queries (needs Gemini).</li>
+      </ul>
+
+      <h3 data-i18n="m.st.metaH">Languages &amp; Metadata</h3>
+      <ul>
+        <li data-i18n-html="m.st.meta1"><strong>UI Translation</strong> — app interface language.</li>
+        <li data-i18n-html="m.st.meta2"><strong>Metadata Language (TMDB)</strong> — language for titles and descriptions from TMDB (primary profile).</li>
+      </ul>
+
+      <h2 data-i18n="m.st.sysH">Profile &amp; System</h2>
+      <figure class="figure">
+        <img src="../images/screenshots/32-settings-profile-system.png" data-i18n-alt="m.st.sysAlt" alt="Profile &amp; System" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 32-settings-profile-system.png</div>'">
+      </figure>
+      <ul>
+        <li data-i18n-html="m.st.sys1"><strong>Parental Control PIN</strong> — create, change, or remove the PIN that locks adult folders (hidden on kids profiles).</li>
+        <li data-i18n-html="m.st.sys2"><strong>Profile Ratings</strong> — review or remove 👍 / 👎 for this profile.</li>
+        <li data-i18n-html="m.st.sys3"><strong>Diagnostics &amp; Troubleshooting</strong> — system and provider status, performance overlay, and <strong>Send logs via QR</strong> for support.</li>
+      </ul>
+      <figure class="figure">
+        <img src="../images/screenshots/24-settings-ratings.png" data-i18n-alt="m.st.ratingsAlt" alt="Profile ratings" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 24-settings-ratings.png</div>'">
+      </figure>
+    </div>
+
+    <p class="pager">
+      <a href="profiles.html" data-i18n="m.st.pagerPrev">â† Profiles</a>
+      <a href="cloud-sync-user.html" data-i18n="m.st.pagerNext">Next: Cloud Sync â†’</a>
+    </p>
+  </main>
+
+  <footer class="site-footer" data-i18n="manual.footer">SmartStream User Manual</footer>
+  <script src="../assets/i18n-product.js"></script>
+  <script src="../assets/i18n-manual.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

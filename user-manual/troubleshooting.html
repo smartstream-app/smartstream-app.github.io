@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troubleshooting — SmartStream</title>
+  <link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-title-key="m.tr.title">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html"><img src="../images/brand/smartstream-logo.png" alt="SmartStream"></a>
+      <nav class="site-nav">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="index.html" class="active" data-i18n="nav.manual">User Manual</a>
+        <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="m.tr.h1">7. Troubleshooting</h1>
+
+    <h2 data-i18n="m.tr.logsH">Send logs to support</h2>
+    <p data-i18n-html="m.tr.logsP">Settings â†’ Profile &amp; System â†’ Diagnostics &amp; Troubleshooting â†’ <strong>Send logs via QR</strong>.</p>
+    <p data-i18n="m.tr.logsQr">Scan the QR code with your phone and choose a category:</p>
+    <table class="data">
+      <tr><th data-i18n="m.tr.thCat">Category</th><th data-i18n="m.tr.thUse">Use when</th></tr>
+      <tr><td data-i18n="m.tr.cat1">Cloud Sync</td><td data-i18n="m.tr.use1">Sync between TVs</td></tr>
+      <tr><td data-i18n="m.tr.cat2">Playback Issues</td><td data-i18n="m.tr.use2">Movies, series, or Live TV playback fails</td></tr>
+      <tr><td data-i18n="m.tr.cat3">Scanner / Library</td><td data-i18n="m.tr.use3">Missing titles, scan</td></tr>
+      <tr><td data-i18n="m.tr.cat4">OpenSubtitles</td><td data-i18n="m.tr.use4">Subtitles</td></tr>
+      <tr><td data-i18n="m.tr.cat5">General / AI</td><td data-i18n="m.tr.use5">Gemini, suggestions</td></tr>
+    </table>
+
+    <h2 data-i18n="m.tr.commonH">Common problems</h2>
+
+    <h3 data-i18n="m.tr.p1h">No titles after setup</h3>
+    <ul>
+      <li data-i18n="m.tr.p1a">Check that movie/series folders are selected and scan is complete</li>
+      <li data-i18n="m.tr.p1b">Settings â†’ Profile &amp; System â†’ Diagnostics for scan and provider status</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p6h">Live TV is empty</h3>
+    <ul>
+      <li data-i18n="m.tr.p6a">Open IPTV Providers â†’ Select TV Channels and save at least one folder</li>
+      <li data-i18n="m.tr.p6b">On extra profiles, check whether Primary TV setup is on or off</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p7h">Program guide is empty or old</h3>
+    <ul>
+      <li data-i18n="m.tr.p7a">Wait for the daily guide download, or use Manage XMLTV â†’ Refresh all EPG now</li>
+      <li data-i18n="m.tr.p7b">Add a custom XMLTV list if your provider’s guide is incomplete</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p2h">Playback fails</h3>
+    <ul>
+      <li data-i18n="m.tr.p2a">Try another stream quality on the details screen</li>
+      <li data-i18n="m.tr.p2b">Settings â†’ Playback &amp; Live TV â†’ Player &amp; Network â†’ Intelligent Switching and Auto-switch poor encodes</li>
+      <li data-i18n="m.tr.p2c">Live TV: if another device uses the same IPTV login, favorites with linked backup streams can switch automatically</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p3h">Cloud Sync not updating</h3>
+    <ul>
+      <li data-i18n="m.tr.p3a">Same PIN on both TVs</li>
+      <li data-i18n="m.tr.p3b">Keep the app open for ~15 seconds on the receiving TV</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p4h">Providers missing</h3>
+    <ul>
+      <li data-i18n="m.tr.p4a">Update to the latest app version</li>
+      <li data-i18n="m.tr.p4b">Or restore from Cloud Sync</li>
+    </ul>
+
+    <h3 data-i18n="m.tr.p5h">AI suggestions empty</h3>
+    <ul>
+      <li data-i18n="m.tr.p5a">Check the Gemini key under Accounts &amp; Connections â†’ Gemini AI</li>
+      <li data-i18n="m.tr.p5b">Diagnostics â†’ embedding / vector status</li>
+    </ul>
+
+    <p class="pager">
+      <a href="cloud-sync-user.html" data-i18n="m.tr.pagerPrev">â† Cloud Sync</a>
+      <a href="index.html" data-i18n="m.tr.pagerNext">Contents</a>
+    </p>
+  </main>
+
+  <footer class="site-footer" data-i18n="manual.footer">SmartStream User Manual</footer>
+  <script src="../assets/i18n-product.js"></script>
+  <script src="../assets/i18n-manual.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily use — Live TV — SmartStream</title>
+  <link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-title-key="m.du.liveTitle">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html"><img src="../images/brand/smartstream-logo.png" alt="SmartStream"></a>
+      <nav class="site-nav">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="index.html" class="active" data-i18n="nav.manual">User Manual</a>
+        <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="m.du.livePageH">3. Daily use — Live TV</h1>
+    <p class="lead" data-i18n-html="m.du.liveIntro">Open <strong>Live TV</strong> in the left menu. You get a program guide (EPG) with a live preview. Press OK on the current programme to watch fullscreen — the picture continues without reconnecting.</p>
+
+    <nav class="screen-nav" aria-label="Daily use">
+      <a href="daily-use.html" data-i18n="m.du.navHome">Home</a>
+      <a href="daily-live-tv.html" class="active" data-i18n="m.du.navLive">Live TV</a>
+      <a href="daily-movies.html" data-i18n="m.du.navMovies">Movies/Series</a>
+      <a href="daily-switching.html" data-i18n="m.du.navSwitch">Intelligent stream switching</a>
+    </nav>
+
+    <figure class="figure">
+      <img src="../images/screenshots/25-live-tv-epg.png" data-i18n-alt="m.du.liveAlt" alt="Live TV EPG" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 25-live-tv-epg.png</div>'">
+      <figcaption data-i18n="m.du.liveCap">Live TV guide — channels, timeline, and live preview.</figcaption>
+    </figure>
+
+    <h2 data-i18n="m.du.liveGuideH">Guide and folders</h2>
+    <ul>
+      <li data-i18n="m.du.live1">The left sidebar lists your selected TV folders (per provider).</li>
+      <li data-i18n="m.du.live2">Favorite Channels and Favorite PPVs sit at the top once you star channels.</li>
+      <li data-i18n="m.du.live3">Search the guide from the side menu to find a programme or channel.</li>
+      <li data-i18n="m.du.live4">If your provider supports catch-up, you can start a past programme from the guide.</li>
+    </ul>
+
+    <h2 data-i18n="m.du.liveFavH">Favorite Channels and multiple streams</h2>
+    <p data-i18n="m.du.liveMultiP">A favorite is not limited to one provider. You can attach extra backup streams from other providers onto the same Favorite Channel. If one source is busy or drops, another stream is already linked.</p>
+    <ul>
+      <li data-i18n="m.du.liveFav1">Add a channel to Favorite Channels or Favorite PPVs from the guide.</li>
+      <li data-i18n="m.du.liveFav2">You can add a whole folder at once.</li>
+      <li data-i18n-html="m.du.liveMulti1"><strong>Link extra streams:</strong> from a channel, choose add stream to an existing favorite — or use Settings → Playback &amp; Live TV → Live TV &amp; EPG → Favorites → Link stream to favorites.</li>
+      <li data-i18n="m.du.liveMulti2">The player menu (OK in fullscreen) lets you switch streams by hand if several are linked.</li>
+      <li data-i18n="m.du.liveFav3">PPV folders can show only active events, and can sort by start time.</li>
+      <li data-i18n="m.du.liveFav4">Set or remove a reminder on a programme. How many minutes before start is under Settings → Playback &amp; Live TV → Live TV &amp; EPG.</li>
+    </ul>
+    <figure class="figure">
+      <img src="../images/screenshots/27-live-tv-favorites.png" data-i18n-alt="m.du.liveFavAlt" alt="Live TV favorites" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 27-live-tv-favorites.png</div>'">
+    </figure>
+    <p data-i18n-html="m.du.liveMultiNote">Linked backups are what <a href="daily-switching.html">Intelligent stream switching</a> uses when a stream fails.</p>
+
+    <h2 data-i18n="m.du.liveFsH">Fullscreen</h2>
+    <figure class="figure">
+      <img src="../images/screenshots/26-live-tv-fullscreen.png" data-i18n-alt="m.du.liveFsAlt" alt="Live TV fullscreen" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 26-live-tv-fullscreen.png</div>'">
+    </figure>
+    <ul>
+      <li data-i18n-html="m.du.liveFs1"><strong>Up / Down</strong> — zap to the next or previous channel</li>
+      <li data-i18n-html="m.du.liveFs2"><strong>Left</strong> — open the on-screen guide overlay</li>
+      <li data-i18n-html="m.du.liveFs3"><strong>Right</strong> — jump back to the previous channel</li>
+      <li data-i18n-html="m.du.liveFs4"><strong>OK</strong> — player menu (info, tracks, stream switch if several streams are linked)</li>
+      <li data-i18n-html="m.du.liveFs5"><strong>Back</strong> — return to the guide (does not close the app)</li>
+    </ul>
+
+    <p class="pager">
+      <a href="daily-use.html" data-i18n="m.du.livePagerPrev">← Home</a>
+      <a href="daily-movies.html" data-i18n="m.du.livePagerNext">Next: Movies/Series →</a>
+    </p>
+  </main>
+
+  <footer class="site-footer" data-i18n="manual.footer">SmartStream User Manual</footer>
+  <script src="../assets/i18n-product.js"></script>
+  <script src="../assets/i18n-manual.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

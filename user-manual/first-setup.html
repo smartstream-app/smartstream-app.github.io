@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First-time setup — SmartStream</title>
+  <link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-title-key="m.fs.title">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html"><img src="../images/brand/smartstream-logo.png" alt="SmartStream"></a>
+      <nav class="site-nav">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="index.html" class="active" data-i18n="nav.manual">User Manual</a>
+        <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="m.fs.h1">2. First-time setup</h1>
+
+    <h2 data-i18n="m.fs.newH">New TV or fresh install</h2>
+    <p data-i18n="m.fs.newP">The app typically guides you in this order:</p>
+    <ol>
+      <li data-i18n="m.fs.new1">App language</li>
+      <li data-i18n="m.fs.new2">New device or restore from cloud</li>
+      <li data-i18n="m.fs.new3">Create profile (name, avatar, optional kids profile)</li>
+      <li data-i18n="m.fs.new4">Cloud Sync — can be skipped</li>
+      <li data-i18n="m.fs.new5">Gemini API — can be skipped</li>
+      <li data-i18n="m.fs.new6">Metadata language (TMDB)</li>
+      <li data-i18n="m.fs.new7">Add IPTV source</li>
+      <li data-i18n="m.fs.new8">Select TV channel folders</li>
+      <li data-i18n="m.fs.new9">Select movie and series folders → scan</li>
+    </ol>
+
+    <h2 data-i18n="m.fs.iptvH">Add IPTV source</h2>
+    <p data-i18n-html="m.fs.iptvP"><strong>Settings â†’ Accounts &amp; Connections â†’ IPTV Providers</strong></p>
+    <p data-i18n="m.fs.iptvP2">You can type the server URL, username and password on the TV, or scan the QR code with your phone on the same Wi-Fi. Use Test before Save. You can connect up to 5 providers.</p>
+
+    <figure class="figure">
+      <img src="../images/screenshots/10-provider-manager.png" data-i18n-alt="m.fs.fig1Alt" alt="IPTV Providers" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 10-provider-manager.png</div>'">
+      <figcaption data-i18n="m.fs.fig1Cap">IPTV Providers: provider list and add/edit (URL, username, password). Use Test before Save.</figcaption>
+    </figure>
+
+    <h2 data-i18n="m.fs.foldersH">Select movie and series folders</h2>
+    <p data-i18n-html="m.fs.foldersP">After saving the provider: <strong>Select Movies and Series</strong> â†’ mark the categories you want â†’ Save &amp; Start Scan.</p>
+
+    <figure class="figure">
+      <img src="../images/screenshots/12-category-selection.png" data-i18n-alt="m.fs.fig2Alt" alt="Categories" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 12-category-selection.png</div>'">
+    </figure>
+
+    <figure class="figure">
+      <img src="../images/screenshots/13-scan-progress.png" data-i18n-alt="m.fs.fig3Alt" alt="Scan" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 13-scan-progress.png</div>'">
+      <figcaption data-i18n="m.fs.fig3Cap">Scan fetches titles and matches posters/descriptions. The first run can take a long time.</figcaption>
+    </figure>
+
+    <h2 data-i18n="m.fs.liveH">Select TV folders (Live TV)</h2>
+    <p data-i18n-html="m.fs.liveP">On the same provider: <strong>Select TV Channels</strong> â†’ mark the channel groups you want â†’ <strong>Save TV Folders</strong>. Live TV and the program guide only show folders you selected.</p>
+    <p data-i18n="m.fs.liveP2">If you open Live TV before selecting folders, the app shows a short setup guide that takes you back to Providers.</p>
+
+    <figure class="figure">
+      <img src="../images/screenshots/34-select-tv-folders.png" data-i18n-alt="m.fs.fig4Alt" alt="Select TV folders" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 34-select-tv-folders.png</div>'">
+      <figcaption data-i18n="m.fs.fig4Cap">Select TV Folders — pick the channel groups this profile should see in Live TV.</figcaption>
+    </figure>
+
+    <h2 data-i18n="m.fs.xmltvH">Optional: custom TV guide (XMLTV)</h2>
+    <p data-i18n-html="m.fs.xmltvP">From IPTV Providers, choose <strong>+ Manage XMLTV</strong> to add up to 3 extra household-wide XMLTV lists, see EPG source status, or refresh all guides now. Lists can also be added with a QR code from your phone.</p>
+
+    <h2 data-i18n="m.fs.restoreH">Restore from another TV</h2>
+    <p data-i18n-html="m.fs.restoreP">During setup: choose <strong>Restore</strong> and enter your Cloud Sync PIN and Google account.</p>
+    <p><a href="cloud-sync-user.html" data-i18n="m.fs.restoreLink">Cloud Sync for users â†’</a></p>
+
+    <p class="pager">
+      <a href="getting-started.html" data-i18n="m.fs.pagerPrev">â† Getting started</a>
+      <a href="daily-use.html" data-i18n="m.fs.pagerNext">Next: Daily use â†’</a>
+    </p>
+  </main>
+
+  <footer class="site-footer" data-i18n="manual.footer">SmartStream User Manual</footer>
+  <script src="../assets/i18n-product.js"></script>
+  <script src="../assets/i18n-manual.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
