@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStream | Terms of Service</title>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --surface-color: #141414;
+            --primary-color: #E50914;
+            --primary-hover: #b80710;
+            --text-main: #dddddd;
+            --text-muted: #888888;
+            --border-color: #262626;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
+            line-height: 1.65;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background-color: var(--surface-color);
+            padding: 45px 50px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary-color); text-decoration: none; }
+        .lang-pills { display: flex; gap: 8px; }
+        .lang-btn {
+            background: #1f1f1f;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 5px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+        h1 { color: #ffffff; margin-top: 0; font-size: 2rem; }
+        h2 { color: var(--primary-color); margin-top: 36px; font-size: 1.35rem; }
+        h3 { color: #ffffff; margin-top: 24px; font-size: 1.1rem; }
+        p { margin: 14px 0; }
+        ul, ol { padding-left: 22px; margin: 14px 0; }
+        li { margin-bottom: 8px; }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .date { color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-bottom: 24px; }
+        
+        .warning-box {
+            background-color: rgba(229, 9, 20, 0.08);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 28px 0;
+            color: #f0f0f0;
+        }
+        .warning-box strong { color: #ff5e67; }
+        
+        .info-box {
+            background-color: #1a1a1a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .lang-section { display: none; }
+        .lang-section.visible { display: block; }
+        
+        @media (max-width: 640px) {
+            body { padding: 20px 12px; }
+            .container { padding: 25px 20px; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">&larr; Back to Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="user-manual/index.html">User Manual</a>
+        </div>
+        <div class="lang-pills">
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-da" onclick="setLanguage('da')">Dansk</button>
+        </div>
+    </div>
+
+    <!-- ENGLISH VERSION -->
+    <div id="content-en" class="lang-section visible">
+        <h1>Terms of Service</h1>
+        <p class="date">Last Updated: November 2026</p>
+
+        <div class="warning-box">
+            <strong>CRITICAL NOTICE:</strong> SmartStream is strictly a media management and playback software client. SmartStream <strong>does NOT provide, host, sell, distribute, or include any media content, TV channels, movies, series, streams, or IPTV subscriptions</strong>. Users are solely responsible for supplying their own playlists and ensuring legal authorization to view any loaded streams.
+        </div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By downloading, installing, accessing, or using the SmartStream application ("the App", "our Service"), developed and provided by NordicByte ("we", "us", "our"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not install or use the application.</p>
+
+        <h2>2. Description of the Service & Bring-Your-Own-Data (BYOD)</h2>
+        <p>SmartStream functions exclusively as an advanced media organizer and player interface designed for Android TV, Fire TV, tablets, and mobile devices. Key operational principles include:</p>
+        <ul>
+            <li><strong>No Content Included:</strong> We do not operate streaming servers, host video files, distribute playlists, or sell IPTV subscription codes.</li>
+            <li><strong>User-Supplied Content:</strong> You must supply your own valid playlist URLs (M3U) or Xtream Codes API credentials obtained independently from third-party services.</li>
+            <li><strong>User Lawful Compliance:</strong> You warrant and represent that you possess all requisite rights, licenses, and permissions to access and stream any media you configure in the App. You agree never to use the App to access pirated, copyright-infringing, or unlawful content in your jurisdiction.</li>
+        </ul>
+
+        <h2>3. Software License & Acceptable Use</h2>
+        <p>We grant you a personal, revocable, non-exclusive, non-transferable, limited license to install and use SmartStream on your compatible devices strictly for personal, non-commercial media playback.</p>
+        <p>You agree that you will not:</p>
+        <ul>
+            <li>Decompile, reverse engineer, disassemble, or attempt to derive the source code of the application.</li>
+            <li>Bypass, tamper with, or circumvent any licensing verification, trial duration checks, security tokens, or copy protections.</li>
+            <li>Distribute, rent, lease, sublicense, resell, or white-label the software without prior written consent from NordicByte.</li>
+            <li>Use the application in any way that violates applicable national, regional, or international laws and regulations.</li>
+        </ul>
+
+        <h2>4. Free Trial, Subscriptions & In-App Purchases</h2>
+        <p>SmartStream may offer a free 30-day evaluation trial for new users to test compatibility on their devices.</p>
+        <ul>
+            <li><strong>Trial Period:</strong> During the trial period, core features are accessible. When the trial period expires, continued access requires a Pro subscription or Lifetime unlock.</li>
+            <li><strong>Store Billing:</strong> All in-app purchases and subscriptions are processed directly through the official app store where you acquired the application (Google Play Store or Amazon Appstore).</li>
+            <li><strong>Renewals and Cancellations:</strong> Subscriptions renew automatically unless cancelled via your Google Play or Amazon account settings prior to the end of the current billing cycle.</li>
+            <li><strong>Refunds:</strong> Refund requests are governed strictly by the refund policies of Google Play or the Amazon Appstore. SmartStream does not process credit card data or issue direct payment refunds.</li>
+        </ul>
+
+        <h2>5. Third-Party Integrations & External Services</h2>
+        <p>SmartStream allows optional integration with third-party services to enrich your media experience:</p>
+        <ul>
+            <li><strong>Google Drive:</strong> Used for optional household Cloud Sync (encrypted watch progress, favorites, and settings backups).</li>
+            <li><strong>Google Gemini API:</strong> Used for optional AI voice search and intelligent title suggestions using your personal API key.</li>
+            <li><strong>The Movie Database (TMDB):</strong> Used to fetch cover art, descriptions, and ratings for your titles.</li>
+            <li><strong>OpenSubtitles:</strong> Used for subtitle search and synchronization.</li>
+            <li><strong>IPTV Service Providers:</strong> Used to stream video from servers you configure.</li>
+        </ul>
+        <p>We do not own, control, or monitor these external services. We are not responsible for third-party server downtime, stream buffering, changes in API availability, or IPTV provider bans. Your interactions with third-party services are governed by their respective terms and privacy policies.</p>
+
+        <h2>6. Parental Controls & Adult Categorization</h2>
+        <p>SmartStream provides built-in PIN protection tools, isolated household profiles, and an optional hidden "XXX" folder category to assist in filtering mature content.</p>
+        <p><strong>User Responsibility:</strong> Parents and account holders are solely responsible for setting a secure PIN and configuring profile permissions to restrict minor access to unsuitable content. NordicByte is not liable for content displayed if parental controls are not configured or are bypassed.</p>
+
+        <h2>7. Disclaimer of Warranties</h2>
+        <p>SmartStream is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis, without warranties of any kind, whether express or implied, including but not limited to fitness for a particular purpose, non-infringement, or error-free operation.</p>
+        <p>Specifically, we do not warrant that:</p>
+        <ul>
+            <li>Every video stream, codec, audio track, or subtitle format will be compatible with your specific hardware.</li>
+            <li>Stream playback will be continuous, buffer-free, or unaffected by internet bandwidth or provider restrictions.</li>
+            <li>AI-generated suggestions or metadata fetched from TMDB will always be 100% accurate.</li>
+        </ul>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, in no event shall NordicByte, its developers, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, loss of IPTV subscription fees paid to third-party providers, or device hardware malfunctions resulting from the use of or inability to use the application.</p>
+
+        <h2>9. Copyright & Intellectual Property Protection</h2>
+        <p>NordicByte respects the intellectual property rights of copyright holders worldwide. Because SmartStream does not host, curate, or distribute any media streams, copyright infringement claims regarding content streamed through the app must be directed to the relevant third-party hosting server or IPTV provider where the stream originates.</p>
+
+        <h2>10. Modifications to Terms</h2>
+        <p>We reserve the right to revise or update these Terms of Service at any time. When updates are published, the "Last Updated" date at the top of this document will be amended. Your continued use of the application following the posting of changes constitutes acceptance of those revisions.</p>
+
+        <h2>11. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of Denmark and applicable European Union regulations, without regard to conflict of law principles. Any dispute arising under or in connection with these terms shall be subject to the jurisdiction of the competent courts of Denmark.</p>
+
+        <h2>12. Contact & Trader Information</h2>
+        <p>SmartStream is developed and operated by NordicByte (Denmark).</p>
+        <p>If you have any questions about these Terms of Service or require technical support, please contact us via:</p>
+        <ul>
+            <li><strong>Support & Issue Tracker:</strong> <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener">GitHub Support Tracker</a></li>
+            <li><strong>User Manual:</strong> <a href="user-manual/index.html">SmartStream User Guide</a></li>
+            <li><strong>EU Trader Details:</strong> Mandatory trader identification details pursuant to the EU Digital Services Act (DSA) are published directly on the SmartStream application listing in the Google Play Store.</li>
+        </ul>
+
+        <div class="footer-note">
+            &copy; 2026 SmartStream / NordicByte. All rights reserved.
+        </div>
+    </div>
+
+    <!-- DANISH VERSION -->
+    <div id="content-da" class="lang-section">
+        <h1>Servicevilkår</h1>
+        <p class="date">Sidst opdateret: November 2026</p>
+
+        <div class="warning-box">
+            <strong>VIGTIG MEDDELELSE:</strong> SmartStream er udelukkende et softwareværktøj til medieafspilning og organisering. SmartStream <strong>leverer, hoster, sælger, distribuerer eller indeholder IKKE medieindhold, TV-kanaler, film, serier, streams eller IPTV-abonnementer</strong>. Brugere er eneansvarlige for selv at medbringe deres egne playlister og sikre den fornødne lovlige ret til at se de indlæste streams.
+        </div>
+
+        <h2>1. Accept af vilkår</h2>
+        <p>Ved at downloade, installere eller benytte applikationen SmartStream ("appen", "vores tjeneste"), udviklet og udbudt af NordicByte ("vi", "os", "vores"), accepterer du at være bundet af disse servicevilkår. Hvis du ikke kan acceptere disse vilkår, må du ikke installere eller anvende appen.</p>
+
+        <h2>2. Beskrivelse af tjenesten & "Bring-Your-Own-Data" (BYOD)</h2>
+        <p>SmartStream fungerer udelukkende som en avanceret brugergrænseflade og afspiller til Android TV, Fire TV, tablets og smartphones. Følgende grundprincipper er gældende:</p>
+        <ul>
+            <li><strong>Intet indhold medfølger:</strong> Vi driver ingen streaming-servere, hoster ingen videofiler, distribuerer ikke playlister og sælger ikke IPTV-abonnementer.</li>
+            <li><strong>Brugerleveret indhold:</strong> Du skal selv medbringe gyldige playlist-adresser (M3U) eller Xtream Codes API-loginoplysninger, som du selvstændigt har erhvervet fra tredjepartsudbydere.</li>
+            <li><strong>Lovlig brug:</strong> Du indestår for, at du har alle nødvendige rettigheder, licenser og tilladelser til at tilgå og afspille det medieindhold, du opsætter i appen. Du må aldrig anvende appen til at tilgå ophavsretskrænkende eller ulovligt indhold.</li>
+        </ul>
+
+        <h2>3. Softwarelicens og acceptabel brug</h2>
+        <p>Vi giver dig en personlig, genkaldelig, ikke-eksklusiv, ikke-overdragelig og begrænset licens til at installere og anvende SmartStream på dine kompatible enheder til privat, ikke-kommercielt brug.</p>
+        <p>Du må ikke:</p>
+        <ul>
+            <li>Dekomprimere, reverse engineere, adskille eller forsøge at udlede applikationens kildekode.</li>
+            <li>Omgå, manipulere eller deaktivere licensvalideringer, prøveperiode-tjek, sikkerhedsnøgler eller kopibeskyttelse.</li>
+            <li>Videredistribuere, udleje, videresælge eller white-labe softwaren uden forudgående skriftlig tilladelse fra NordicByte.</li>
+            <li>Anvende applikationen i strid med gældende dansk eller international lovgivning.</li>
+        </ul>
+
+        <h2>4. Gratis prøveperiode, abonnementer og køb i appen</h2>
+        <p>SmartStream kan tilbyde en 30-dages gratis prøveperiode til nye brugere, så funktionalitet og kompatibilitet kan testes af.</p>
+        <ul>
+            <li><strong>Prøveperiode:</strong> Under prøveperioden er alle kernefunktioner tilgængelige. Når prøveperioden udløber, kræver fortsat fuld adgang et Pro-abonnement eller et livstids-oplåsning.</li>
+            <li><strong>Afregning via App Stores:</strong> Alle køb i appen og abonnementer håndteres og afregnes direkte af den officielle app-butik, hvor du downloadede appen (Google Play Butik eller Amazon Appstore).</li>
+            <li><strong>Fornyelse og opsigelse:</strong> Abonnementer fornys automatisk, medmindre de opsiges via dine kontoindstillinger i Google Play eller Amazon forud for fornyelsesdatoen.</li>
+            <li><strong>Refusion:</strong> Anmodninger om refundering afgøres udelukkende efter retningslinjerne hos Google Play eller Amazon Appstore. SmartStream opbevarer ikke betalingskortoplysninger og kan ikke udstede direkte refunderinger.</li>
+        </ul>
+
+        <h2>5. Tredjepartstjenester og integrationer</h2>
+        <p>SmartStream tilbyder valgfri integration med udvalgte eksterne tjenester:</p>
+        <ul>
+            <li><strong>Google Drev:</strong> Benyttes til valgfri husstands-Cloud Sync (krypteret synkronisering af sete film, favoritter og indstillinger).</li>
+            <li><strong>Google Gemini API:</strong> Benyttes til valgfri AI-stemmesøgning og intelligente titelforslag via din egen API-nøgle.</li>
+            <li><strong>The Movie Database (TMDB):</strong> Benyttes til at hente plakater, beskrivelser og bedømmelser til dine titler.</li>
+            <li><strong>OpenSubtitles:</strong> Benyttes til søgning og synkronisering af undertekster.</li>
+            <li><strong>IPTV-udbydere:</strong> Benyttes til afspilning af videostreams fra de servere, du selv opsætter.</li>
+        </ul>
+        <p>Vi ejer, overvåger eller kontrollerer ikke disse eksterne tjenester. Vi er ikke ansvarlige for servernedbrud hos tredjeparter, buffering, ændringer i API-kvoter eller blokeringer hos din IPTV-udbyder.</p>
+
+        <h2>6. Forældrekontrol og voksenindhold (XXX)</h2>
+        <p>SmartStream indeholder indbygget PIN-kodebeskyttelse, isolerede profiler og en valgfri skjult "XXX"-kategori for at hjælpe med at afskærme upassende indhold.</p>
+        <p><strong>Brugerens ansvar:</strong> Forældre og kontohavere er eneansvarlige for at oprette en sikker PIN-kode og opsætte profilrettigheder, så mindreårige ikke opnår adgang til uegnet materiale. NordicByte kan ikke holdes ansvarlig for indhold vist som følge af manglende eller omgået forældrekontrol.</p>
+
+        <h2>7. Fraskrivelse af garantier</h2>
+        <p>SmartStream leveres <strong>"SOM DEN ER OG FOREFINDES"</strong> ("as is") uden nogen form for udtrykkelige eller stiltiende garantier, herunder, men ikke begrænset til, egnethed til bestemte formål eller uafbrudt drift.</p>
+        <p>Vi garanterer specifikt ikke, at:</p>
+        <ul>
+            <li>Ethvert stream-format, video-codec, lydspor eller undertekstformat understøttes fejlfrit på din specifikke hardware.</li>
+            <li>Afspilningen vil være uafbrudt, fri for buffering eller upåvirket af din internetforbindelse eller din IPTV-udbyders serverkapacitet.</li>
+            <li>AI-genererede forslag eller metadata fra TMDB altid er 100 % nøjagtige.</li>
+        </ul>
+
+        <h2>8. Ansvarsbegrænsning</h2>
+        <p>I det maksimale omfang det er tilladt efter gældende ret, kan NordicByte eller dets udviklere under ingen omstændigheder gøres erstatningsansvarlige for indirekte tab, driftstab, følgeskader, tab af data, tabte abonnementsudgifter betalt til tredjeparts-IPTV-udbydere eller hardwarefejl som følge af brugen af eller manglende evne til at bruge applikationen.</p>
+
+        <h2>9. Ophavsret og intellektuel ejendomsret</h2>
+        <p>NordicByte respekterer rettighedshaveres ophavsret. Da SmartStream ikke hoster, udvælger eller distribuerer nogen mediestreams, skal henvendelser vedrørende ophavsretskrænkelser på det streamede indhold rettes direkte til den relevante tredjepartsserver eller udbyder, hvorfra streamet sendes.</p>
+
+        <h2>10. Ændringer af vilkår</h2>
+        <p>Vi forbeholder os retten til at opdatere eller ændre disse servicevilkår til enhver tid. Ved ændringer vil datoen "Sidst opdateret" øverst i dokumentet blive opdateret. Din fortsatte brug af appen efter offentliggørelse af ændringer udgør din accept af de opdaterede vilkår.</p>
+
+        <h2>11. Lovvalg og værneting</h2>
+        <p>Disse vilkår er underlagt og skal fortolkes i overensstemmelse med dansk ret og gældende EU-ret. Eventuelle tvister, som udspringer af disse vilkår eller brugen af appen, skal afgøres ved de almindelige danske domstole.</p>
+
+        <h2>12. Kontakt og forhandleroplysninger</h2>
+        <p>SmartStream udvikles og drives af NordicByte (Danmark).</p>
+        <p>Har du spørgsmål til disse servicevilkår eller brug for support, kan du kontakte os via:</p>
+        <ul>
+            <li><strong>Support & fejlrapportering:</strong> <a href="https://github.com/smartstream-app/smartstream-app.github.io/issues" target="_blank" rel="noopener">GitHub Support Tracker</a></li>
+            <li><strong>Brugermanual:</strong> <a href="user-manual/index.html">SmartStream Brugermanual</a></li>
+            <li><strong>EU-forhandleroplysninger:</strong> Lovpligtige forhandleroplysninger i henhold til EU's Digital Services Act (DSA) fremgår direkte på appens produktside i Google Play Butik.</li>
+        </ul>
+
+        <div class="footer-note">
+            &copy; 2026 SmartStream / NordicByte. Alle rettigheder forbeholdes.
+        </div>
+    </div>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        document.querySelectorAll('.lang-section').forEach(function(el) {
+            el.classList.remove('visible');
+        });
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        var targetContent = document.getElementById('content-' + lang);
+        var targetBtn = document.getElementById('btn-' + lang);
+
+        if (targetContent) targetContent.classList.add('visible');
+        if (targetBtn) targetBtn.classList.add('active');
+
+        try {
+            localStorage.setItem('smartstream_site_lang', lang);
+        } catch (_) {}
+    }
+
+    // Auto-detect saved or browser language
+    (function() {
+        var preferred = 'en';
+        try {
+            var stored = localStorage.getItem('smartstream_site_lang');
+            if (stored === 'da' || stored === 'en') preferred = stored;
+            else if (navigator.language && navigator.language.toLowerCase().startsWith('da')) preferred = 'da';
+        } catch (_) {}
+        setLanguage(preferred);
+    })();
+</script>
+</body>
+</html>

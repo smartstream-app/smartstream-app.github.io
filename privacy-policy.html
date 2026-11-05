@@ -3,40 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStream | Privacy Policy & Terms</title>
+    <title>SmartStream | Privacy Policy</title>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <style>
         :root {
-            --bg-color: #111111;
-            --surface-color: #1a1a1a;
+            --bg-color: #0a0a0a;
+            --surface-color: #141414;
             --primary-color: #E50914;
             --text-main: #dddddd;
+            --border-color: #262626;
         }
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
+            line-height: 1.65;
             margin: 0;
             padding: 40px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: 0 auto;
             background-color: var(--surface-color);
-            padding: 50px;
-            border-radius: 12px;
+            padding: 45px 50px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
             border-top: 4px solid var(--primary-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
-        h1 { color: #ffffff; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        h2 { color: var(--primary-color); margin-top: 40px; font-size: 1.4em; }
-        h3 { color: #ffffff; margin-top: 30px; }
+        h1 { color: #ffffff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
+        h2 { color: var(--primary-color); margin-top: 40px; font-size: 1.35rem; }
+        h3 { color: #ffffff; margin-top: 30px; font-size: 1.1rem; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
         a { color: var(--primary-color); text-decoration: none; }
         a:hover { text-decoration: underline; }
         .date { color: #888; font-style: italic; }
-        .header-link { display: inline-block; margin-bottom: 30px; font-weight: bold; }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .top-nav a {
+            color: #888;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .top-nav a:hover { color: var(--primary-color); }
         
         .warning-box {
             background-color: rgba(229, 9, 20, 0.1);
@@ -48,7 +68,11 @@
 </head>
 <body>
 <div class="container">
-    <a href="index.html" class="header-link">&larr; Back to SmartStream Home</a>
+    <div class="top-nav">
+        <a href="index.html">&larr; Back to SmartStream Home</a>
+        <a href="terms.html">Terms of Service &rarr;</a>
+    </div>
+
     <h1>Privacy Policy</h1>
     <p class="date">Last Updated: June 2026</p>
     
@@ -91,7 +115,7 @@
     </ul>
     <p><em>Please refer to these providers' respective privacy policies for how they handle data on their end.</em></p>
     
-    <hr style="border: 0; border-top: 1px solid #333; margin: 60px 0 40px;">
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0 40px;">
     
     <h1>Technical Disclaimer & Terms of Use</h1>
     <div class="warning-box">
@@ -109,6 +133,11 @@
     
     <h3>4. Parental Controls</h3>
     <p>The app includes an "XXX" folder categorization feature for adult content. It is the user's responsibility to set a secure PIN to prevent unauthorized access by minors.</p>
+
+    <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid var(--border-color); text-align: center;">
+        <p>Looking for our comprehensive service terms?</p>
+        <p><a href="terms.html" style="font-weight: bold; font-size: 1.1rem;">&rarr; View the complete SmartStream Terms of Service</a></p>
+    </div>
 </div>
 </body>
 </html>
