@@ -46,10 +46,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
             margin-bottom: 30px;
             padding-bottom: 15px;
             border-bottom: 1px solid var(--border-color);
         }
+        .nav-links { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
         .top-nav a {
             color: #888;
             font-size: 0.95rem;
@@ -57,87 +60,107 @@
             transition: color 0.2s;
         }
         .top-nav a:hover { color: var(--primary-color); }
-        
+        #langSwitch select {
+            background: #1f1f1f;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 9999px;
+            padding: 5px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #langSwitch select:hover { border-color: var(--primary-color); }
         .warning-box {
             background-color: rgba(229, 9, 20, 0.1);
             border-left: 4px solid var(--primary-color);
             padding: 15px 20px;
             margin: 30px 0;
         }
+        @media (max-width: 640px) {
+            body { padding: 20px 12px; }
+            .container { padding: 25px 20px; }
+        }
     </style>
 </head>
-<body>
+<body data-title-key="priv.metaTitle">
 <div class="container">
     <div class="top-nav">
-        <a href="index.html">&larr; Back to SmartStream Home</a>
-        <a href="terms.html">Terms of Service &rarr;</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="priv.navHome">&larr; Back to SmartStream Home</a>
+            <a href="terms.html" data-i18n="priv.navTerms">Terms of Service &rarr;</a>
+        </div>
+        <div id="langSwitch"></div>
     </div>
 
-    <h1>Privacy Policy</h1>
-    <p class="date">Last Updated: June 2026</p>
-    
-    <h2>1. Data Collection & Control</h2>
-    <p>Our application is designed as a "Bring Your Own Data" (BYOD) utility. We do not host, store, or see your media content.</p>
+    <h1 data-i18n="priv.h1">Privacy Policy</h1>
+    <p class="date" data-i18n="priv.date">Last Updated: June 2026</p>
+
+    <h2 data-i18n="priv.s1.h">1. Data Collection & Control</h2>
+    <p data-i18n="priv.s1.p">Our application is designed as a "Bring Your Own Data" (BYOD) utility. We do not host, store, or see your media content.</p>
     <ul>
-        <li><strong>User-Provided Keys:</strong> You provide your own Google Gemini API and Google Drive credentials. This data is stored locally on your device and encrypted.</li>
-        <li><strong>No Third-Party Tracking:</strong> We do not sell your viewing habits to advertisers. Your ratings and watch history stay within your private Google Cloud environment.</li>
+        <li data-i18n-html="priv.s1.li1"><strong>User-Provided Keys:</strong> You provide your own Google Gemini API and Google Drive credentials. This data is stored locally on your device and encrypted.</li>
+        <li data-i18n-html="priv.s1.li2"><strong>No Third-Party Tracking:</strong> We do not sell your viewing habits to advertisers. Your ratings and watch history stay within your private Google Cloud environment.</li>
     </ul>
 
-    <h2>2. Crash Logs & Diagnostics</h2>
-    <p>To improve app stability and functionality, SmartStream collects anonymous crash logs and diagnostic data.</p>
+    <h2 data-i18n="priv.s2.h">2. Crash Logs & Diagnostics</h2>
+    <p data-i18n="priv.s2.p">To improve app stability and functionality, SmartStream collects anonymous crash logs and diagnostic data.</p>
     <ul>
-        <li><strong>What we collect:</strong> Non-personally identifiable information regarding app crashes, errors, and performance metrics.</li>
-        <li><strong>How it is used:</strong> This data is strictly collected for analytics and app functionality (e.g., identifying and fixing software bugs).</li>
-        <li><strong>Secure Transfer:</strong> Crash reports are transmitted securely via HTTPS directly to the developer's private monitoring tools. They are never shared with third-party advertising networks.</li>
+        <li data-i18n-html="priv.s2.li1"><strong>What we collect:</strong> Non-personally identifiable information regarding app crashes, errors, and performance metrics.</li>
+        <li data-i18n-html="priv.s2.li2"><strong>How it is used:</strong> This data is strictly collected for analytics and app functionality (e.g., identifying and fixing software bugs).</li>
+        <li data-i18n-html="priv.s2.li3"><strong>Secure Transfer:</strong> Crash reports are transmitted securely via HTTPS directly to the developer's private monitoring tools. They are never shared with third-party advertising networks.</li>
     </ul>
 
-    <h2>3. Optional QR / Phone-to-TV Setup (Local Network)</h2>
-    <p>If you choose to configure SmartStream using a QR code or a guided setup page on your phone, your Google Gemini API key may be sent <strong>directly from your phone to your Android TV over your local network (LAN)</strong>. This is an optional convenience feature so you can paste the key on a phone keyboard instead of typing it on a TV remote.</p>
+    <h2 data-i18n="priv.s3.h">3. Optional QR / Phone-to-TV Setup (Local Network)</h2>
+    <p data-i18n-html="priv.s3.p">If you choose to configure SmartStream using a QR code or a guided setup page on your phone, your Google Gemini API key may be sent <strong>directly from your phone to your Android TV over your local network (LAN)</strong>. This is an optional convenience feature so you can paste the key on a phone keyboard instead of typing it on a TV remote.</p>
     <ul>
-        <li><strong>No relay server:</strong> SmartStream does not route this transfer through our servers. The key is sent device-to-device on your Wi‑Fi (or equivalent LAN).</li>
-        <li><strong>Time-limited pairing:</strong> Setup uses a short-lived pairing session (for example, a one-time code or token that expires after a limited time). You should only complete setup when you trust the network you are on.</li>
-        <li><strong>Local storage only:</strong> After your TV receives the key, it is stored only on that device, encrypted at rest, as described below.</li>
+        <li data-i18n-html="priv.s3.li1"><strong>No relay server:</strong> SmartStream does not route this transfer through our servers. The key is sent device-to-device on your Wi‑Fi (or equivalent LAN).</li>
+        <li data-i18n-html="priv.s3.li2"><strong>Time-limited pairing:</strong> Setup uses a short-lived pairing session (for example, a one-time code or token that expires after a limited time). You should only complete setup when you trust the network you are on.</li>
+        <li data-i18n-html="priv.s3.li3"><strong>Local storage only:</strong> After your TV receives the key, it is stored only on that device, encrypted at rest, as described below.</li>
     </ul>
 
-    <h2>4. Encryption and Security</h2>
+    <h2 data-i18n="priv.s4.h">4. Encryption and Security</h2>
     <ul>
-        <li><strong>In-Transit (external services):</strong> Communication between the app and third-party APIs over the internet (for example TMDB, Google Cloud services, IPTV providers where applicable) uses HTTPS (TLS 1.3).</li>
-        <li><strong>In-Transit (local pairing):</strong> Phone-to-TV key transfer happens on your local network and is not encrypted by SmartStream in the same way as HTTPS to the public internet. Use a private, trusted Wi‑Fi network when using QR / phone setup.</li>
-        <li><strong>At-Rest:</strong> Your configuration files and PIN-protected folders are encrypted using AES-256 bit encryption.</li>
+        <li data-i18n-html="priv.s4.li1"><strong>In-Transit (external services):</strong> Communication between the app and third-party APIs over the internet (for example TMDB, Google Cloud services, IPTV providers where applicable) uses HTTPS (TLS 1.3).</li>
+        <li data-i18n-html="priv.s4.li2"><strong>In-Transit (local pairing):</strong> Phone-to-TV key transfer happens on your local network and is not encrypted by SmartStream in the same way as HTTPS to the public internet. Use a private, trusted Wi‑Fi network when using QR / phone setup.</li>
+        <li data-i18n-html="priv.s4.li3"><strong>At-Rest:</strong> Your configuration files and PIN-protected folders are encrypted using AES-256 bit encryption.</li>
     </ul>
 
-    <h2>5. Third-Party Services</h2>
-    <p>By using the AI recommendation and cloud sync features, you interact with:</p>
+    <h2 data-i18n="priv.s5.h">5. Third-Party Services</h2>
+    <p data-i18n="priv.s5.p">By using the AI recommendation and cloud sync features, you interact with:</p>
     <ul>
-        <li><strong>Google Gemini API:</strong> To generate metadata and recommendations.</li>
-        <li><strong>Google Drive:</strong> To store your personal backup and sync files.</li>
-        <li><strong>TMDB:</strong> To fetch movie and series posters and descriptions.</li>
+        <li data-i18n-html="priv.s5.li1"><strong>Google Gemini API:</strong> To generate metadata and recommendations.</li>
+        <li data-i18n-html="priv.s5.li2"><strong>Google Drive:</strong> To store your personal backup and sync files.</li>
+        <li data-i18n-html="priv.s5.li3"><strong>TMDB:</strong> To fetch movie and series posters and descriptions.</li>
     </ul>
-    <p><em>Please refer to these providers' respective privacy policies for how they handle data on their end.</em></p>
-    
+    <p><em data-i18n="priv.s5.note">Please refer to these providers' respective privacy policies for how they handle data on their end.</em></p>
+
     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 60px 0 40px;">
-    
-    <h1>Technical Disclaimer & Terms of Use</h1>
-    <div class="warning-box">
+
+    <h1 data-i18n="priv.disc.h1">Technical Disclaimer & Terms of Use</h1>
+    <div class="warning-box" data-i18n-html="priv.disc.warn">
         <strong>IMPORTANT:</strong> SmartStream does not provide, host, or link to any media content or IPTV subscriptions.
     </div>
-    
-    <h3>1. User Responsibility</h3>
-    <p>This application is a media management tool. It requires the user to have their own valid IPTV subscription (Xtream/M3U) and API keys. The user is solely responsible for ensuring that the content they access via the app is legal and does not infringe on copyrights in their jurisdiction.</p>
-    
-    <h3>2. No Content Provided</h3>
-    <p>We do not sell subscriptions, "m3u lists," or access to any television channels or movies. We have no affiliation with any third-party IPTV providers.</p>
-    
-    <h3>3. AI and Metadata Accuracy</h3>
-    <p>The app uses AI (Google Gemini) and TMDB to provide information about your media. While we strive for accuracy, we cannot guarantee that the metadata, ratings, or suggestions generated by the AI will be 100% accurate or appropriate for all audiences.</p>
-    
-    <h3>4. Parental Controls</h3>
-    <p>The app includes a PIN lock feature that lets you lock selected content and folders. It is the user's responsibility to set a secure PIN to prevent unauthorized access.</p>
+
+    <h3 data-i18n="priv.disc.s1.h">1. User Responsibility</h3>
+    <p data-i18n="priv.disc.s1.p">This application is a media management tool. It requires the user to have their own valid IPTV subscription (Xtream/M3U) and API keys. The user is solely responsible for ensuring that the content they access via the app is legal and does not infringe on copyrights in their jurisdiction.</p>
+
+    <h3 data-i18n="priv.disc.s2.h">2. No Content Provided</h3>
+    <p data-i18n="priv.disc.s2.p">We do not sell subscriptions, "m3u lists," or access to any television channels or movies. We have no affiliation with any third-party IPTV providers.</p>
+
+    <h3 data-i18n="priv.disc.s3.h">3. AI and Metadata Accuracy</h3>
+    <p data-i18n="priv.disc.s3.p">The app uses AI (Google Gemini) and TMDB to provide information about your media. While we strive for accuracy, we cannot guarantee that the metadata, ratings, or suggestions generated by the AI will be 100% accurate or appropriate for all audiences.</p>
+
+    <h3 data-i18n="priv.disc.s4.h">4. Parental Controls</h3>
+    <p data-i18n="priv.disc.s4.p">The app includes a PIN lock feature that lets you lock selected content and folders. It is the user's responsibility to set a secure PIN to prevent unauthorized access.</p>
 
     <div style="margin-top: 35px; padding-top: 25px; border-top: 1px solid var(--border-color); text-align: center;">
-        <p>Looking for our comprehensive service terms?</p>
-        <p><a href="terms.html" style="font-weight: bold; font-size: 1.1rem;">&rarr; View the complete SmartStream Terms of Service</a></p>
+        <p data-i18n="priv.cta.p">Looking for our comprehensive service terms?</p>
+        <p><a href="terms.html" style="font-weight: bold; font-size: 1.1rem;" data-i18n="priv.cta.link">&rarr; View the complete SmartStream Terms of Service</a></p>
     </div>
 </div>
+<script src="assets/i18n-legal.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

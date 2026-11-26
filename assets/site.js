@@ -1,13 +1,33 @@
 (function () {
   'use strict';
 
-  var SUPPORTED = ['en', 'da', 'de', 'es', 'fr'];
+  var SUPPORTED = ['en', 'da', 'de', 'es', 'fr', 'it', 'nl', 'nb', 'sv', 'fi', 'pl', 'pt', 'pt-BR', 'tr', 'ar'];
+  var LANG_LABELS = {
+    'en': 'English',
+    'da': 'Dansk',
+    'de': 'Deutsch',
+    'es': 'Español',
+    'fr': 'Français',
+    'it': 'Italiano',
+    'nl': 'Nederlands',
+    'nb': 'Norsk',
+    'sv': 'Svenska',
+    'fi': 'Suomi',
+    'pl': 'Polski',
+    'pt': 'Português',
+    'pt-BR': 'Português (BR)',
+    'tr': 'Türkçe',
+    'ar': 'العربية'
+  };
   var STORAGE_KEY = 'smartstream_site_lang';
   var DEFAULT_LANG = 'en';
 
   function normalizeLang(code) {
     if (!code) return DEFAULT_LANG;
-    var base = String(code).toLowerCase().split('-')[0];
+    var raw = String(code).trim().toLowerCase().replace('_', '-');
+    if (raw === 'pt-br' || raw.indexOf('pt-br-') === 0) return 'pt-BR';
+    var base = raw.split('-')[0];
+    if (base === 'no' || base === 'nn') base = 'nb';
     return SUPPORTED.indexOf(base) >= 0 ? base : DEFAULT_LANG;
   }
 
@@ -37,6 +57,7 @@
 
   function applyLang(lang) {
     document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar' ? 'rtl' : 'ltr');
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
       var value = t(lang, key);
@@ -57,7 +78,10 @@
       var value = t(lang, key);
       if (value != null) el.setAttribute('alt', value);
     });
-    document.title = t(lang, document.body.getAttribute('data-title-key')) || document.title;
+    var titleKey = document.body.getAttribute('data-title-key');
+    if (titleKey) {
+      document.title = t(lang, titleKey) || document.title;
+    }
     var select = document.getElementById('langSelect');
     if (select && select.value !== lang) select.value = lang;
   }
@@ -77,7 +101,7 @@
     SUPPORTED.forEach(function (code) {
       var opt = document.createElement('option');
       opt.value = code;
-      opt.textContent = code.toUpperCase();
+      opt.textContent = LANG_LABELS[code] || code.toUpperCase();
       select.appendChild(opt);
     });
     select.addEventListener('change', function () { setLang(select.value); });
