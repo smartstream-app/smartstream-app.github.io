@@ -88,6 +88,7 @@ window.SMARTSTREAM_I18N_PRODUCT = {
     "sec.dashboard.li1": "<strong>Native Android TV Integration:</strong> Access your \"Continue Watching\" and \"AI Suggested\" lists directly from your television's main launcher home screen without even opening the app.",
     "sec.dashboard.li2": "<strong>Localized Rich Metadata:</strong> Beautiful poster grids with full descriptions and details in your language.",
     "sec.dashboard.li3": "<strong>Frictionless Playback:</strong> Switch audio tracks and subtitles mid-stream, watch official trailers before hitting play, and navigate Live TV with a lightning-fast EPG and catch-up.",
+    "sec.dashboard.li4": "<strong>Smart Subtitles:</strong> Built-in OpenSubtitles with automatic translation from other languages (using your own Gemini key) and automatic sync, so subtitles always match the picture.",
 
     "sec.profiles.badge": "HOUSEHOLD & PRIVACY",
     "sec.profiles.title": "Household & Profile Control",
@@ -239,6 +240,7 @@ window.SMARTSTREAM_I18N_PRODUCT = {
     "sec.dashboard.li1": "<strong>Native Android TV-integration:</strong> Se \"Continue Watching\" og \"AI Suggested\" direkte på dit TV's startskærm uden at åbne appen.",
     "sec.dashboard.li2": "<strong>Rig lokaliseret metadata:</strong> Flot plakatgitter med fyldige beskrivelser på dit eget sprog.",
     "sec.dashboard.li3": "<strong>Problemfri afspilning:</strong> Skift lydspor og undertekster undervejs, se trailere før afspilning, og nyd lynhurtig EPG med catch-up.",
+    "sec.dashboard.li4": "<strong>Smarte undertekster:</strong> Indbygget OpenSubtitles med automatisk oversættelse fra andre sprog (med din egen Gemini-nøgle) og automatisk synkronisering, så teksten altid passer til billedet.",
 
     "sec.profiles.badge": "FAMILIE OG SIKKERHED",
     "sec.profiles.title": "Profiler og forældrekontrol",
@@ -390,6 +392,7 @@ window.SMARTSTREAM_I18N_PRODUCT = {
     "sec.dashboard.li1": "<strong>Native Android TV Kanäle:</strong> „Weiterschauen“ und „KI-Vorschläge“ direkt auf dem TV-Startbildschirm sehen.",
     "sec.dashboard.li2": "<strong>Lokalisierte Metadaten:</strong> Hochauflösende Poster und Texte auf Deutsch.",
     "sec.dashboard.li3": "<strong>Reibungslose Wiedergabe:</strong> Tonspuren und Untertitel während des Streams wechseln, Trailer vorab abspielen und schneller EPG.",
+    "sec.dashboard.li4": "<strong>Intelligente Untertitel:</strong> Integriertes OpenSubtitles mit automatischer Übersetzung aus anderen Sprachen (mit deinem eigenen Gemini-Schlüssel) und automatischer Synchronisierung, damit Untertitel immer zum Bild passen.",
 
     "sec.profiles.badge": "HAUSHALT & SICHERHEIT",
     "sec.profiles.title": "Profile & Jugendschutz",
@@ -541,6 +544,7 @@ window.SMARTSTREAM_I18N_PRODUCT = {
     "sec.dashboard.li1": "<strong>Canales en el inicio de Android TV:</strong> Accede a \"Seguir viendo\" y sugerencias IA directamente desde la pantalla de inicio del televisor.",
     "sec.dashboard.li2": "<strong>Metadatos enriquecidos:</strong> Carátulas en alta definición y sinopsis en tu idioma.",
     "sec.dashboard.li3": "<strong>Reproducción sin fricción:</strong> Cambia audio y subtítulos en directo, mira tráilers antes de reproducir y disfruta de EPG con catch-up.",
+    "sec.dashboard.li4": "<strong>Subtítulos inteligentes:</strong> OpenSubtitles integrado con traducción automática desde otros idiomas (con tu propia clave de Gemini) y sincronización automática, para que los subtítulos siempre coincidan con la imagen.",
 
     "sec.profiles.badge": "HOGAR Y SEGURIDAD",
     "sec.profiles.title": "Perfiles y control para toda la casa",
@@ -692,6 +696,7 @@ window.SMARTSTREAM_I18N_PRODUCT = {
     "sec.dashboard.li1": "<strong>Intégration écran d'accueil Android TV :</strong> Retrouvez \"Reprendre la lecture\" et suggestions IA directement sur votre téléviseur sans ouvrir l'app.",
     "sec.dashboard.li2": "<strong>Métadonnées enrichies et localisées :</strong> Grille d'affiches en haute définition et descriptions dans votre langue.",
     "sec.dashboard.li3": "<strong>Lecture sans friction :</strong> Changez de piste audio et de sous-titres en direct, regardez les bandes-annonces et profitez de l'EPG avec catch-up.",
+    "sec.dashboard.li4": "<strong>Sous-titres intelligents :</strong> OpenSubtitles intégré avec traduction automatique depuis d'autres langues (avec votre propre clé Gemini) et synchronisation automatique, pour que les sous-titres correspondent toujours à l'image.",
 
     "sec.profiles.badge": "FOYER & CONFIDENTIALITÉ",
     "sec.profiles.title": "Gestion du foyer & profils séparés",

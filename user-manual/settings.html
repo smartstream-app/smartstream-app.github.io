@@ -126,6 +126,32 @@
         <img src="../images/screenshots/21-opensubtitles.png" data-i18n-alt="m.st.osAlt" alt="OpenSubtitles" onerror="this.outerHTML='<div class=\'figure placeholder\'>Screenshot needed: 21-opensubtitles.png</div>'">
       </figure>
 
+      <h3 data-i18n="m.st.osAutoH">OpenSubtitles: auto translation &amp; auto sync</h3>
+      <p data-i18n="m.st.osAutoP">No subtitles in your language? SmartStream can find a file in another language and translate it for you. Subtitles that start too early or too late are lined up with the film automatically.</p>
+      <h4 data-i18n="m.st.osTrH">Turn on auto translation</h4>
+      <ol>
+        <li data-i18n-html="m.st.osTr1"><strong>Settings → UI &amp; Languages → Subtitles → Configure OpenSubtitles</strong> and sign in with your OpenSubtitles account (a Pro feature).</li>
+        <li data-i18n-html="m.st.osTr2"><strong>Preferred subtitle language</strong>: pick the language you want to read. Auto translation does not run when it is set to None or English.</li>
+        <li data-i18n-html="m.st.osTr3">Add your own Gemini key in <strong>Settings → AI</strong> (a free key from Google AI Studio). The translation uses your key.</li>
+        <li data-i18n-html="m.st.osTr4">Back on the OpenSubtitles page, set <strong>Translate OpenSubtitles</strong> to <strong>Enabled</strong>. It is off by default and is set per profile.</li>
+      </ol>
+      <h4 data-i18n="m.st.osUseH">While you watch</h4>
+      <ul>
+        <li data-i18n-html="m.st.osUse1">Start a film or episode from its Details page. If neither the stream nor OpenSubtitles has your language, SmartStream picks an English file (or a file in any other language if there is no English) and translates it.</li>
+        <li data-i18n-html="m.st.osUse2">A progress wheel shows briefly. The film starts as soon as the first part is translated, and the rest is translated while you watch.</li>
+        <li data-i18n-html="m.st.osUse3">The translated file is saved, so next time it starts at once. It also works when casting and from Continue Watching.</li>
+        <li data-i18n-html="m.st.osUse4">To pick a file yourself, press OK in the player, then <strong>Subs → OpenSubs</strong>, and search in any language. With the setting on, files in other languages are translated automatically; with it off, tick <strong>Translate other languages to …</strong>.</li>
+        <li data-i18n-html="m.st.osUse5">The info line in the OK menu shows the active file, for example <em>Danish (Opensubs, translated)</em>.</li>
+      </ul>
+      <h4 data-i18n="m.st.osSyncH">Automatic sync</h4>
+      <ul>
+        <li data-i18n-html="m.st.osSync1">When an OpenSubtitles file is on, SmartStream checks its timing in the background. If the film has its own subtitle track it compares when the text appears; otherwise it listens to when people speak.</li>
+        <li data-i18n-html="m.st.osSync2">The subtitles show as normal. If they are out of step, the text jumps into place, usually within a minute, and is fine-tuned over the next few minutes. A film that starts with a long music intro can take a little longer.</li>
+        <li data-i18n-html="m.st.osSync3">The correction is saved per subtitle file and follows your other devices through Cloud Sync, so you only wait the first time.</li>
+        <li data-i18n-html="m.st.osSync4">You can always adjust by hand with the <strong>Sub delay − / +</strong> buttons in the OK menu. If the app cannot find the timing, a short hint tells you to do that.</li>
+      </ul>
+      <div class="note" data-i18n="m.st.osNote">Translation needs a Gemini key. A free key has a daily limit; if it is reached you see the original text, and the rest is translated next time.</div>
+
       <h3 data-i18n="m.st.osdH">Interface &amp; OSD</h3>
       <ul>
         <li data-i18n-html="m.st.osd1"><strong>Playback bar auto-hide delay</strong> — how long the control bar stays visible (or Off).</li>
